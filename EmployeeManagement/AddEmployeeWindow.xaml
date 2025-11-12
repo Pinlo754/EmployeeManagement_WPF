@@ -1,0 +1,74 @@
+﻿<Window x:Class="EmployeeManagement.AddEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeeManagement"
+        mc:Ignorable="d"
+        Title="AddEmployeeWindow" Height="800" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Họ tên"/>
+            <TextBox Text="{Binding FullName, UpdateSourceTrigger=PropertyChanged}" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Ngày sinh"/>
+            <DatePicker SelectedDate="{Binding DateOfBirthPicker}" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Giới tính"/>
+            <ComboBox 
+    SelectedValue="{Binding Gender, UpdateSourceTrigger=PropertyChanged}" 
+    SelectedValuePath="Content"
+    Margin="0,5,0,10">
+                <ComboBoxItem Content="Nam"/>
+                <ComboBoxItem Content="Nữ"/>
+            </ComboBox>
+
+
+            <TextBlock Text="Địa chỉ"/>
+            <TextBox Text="{Binding Address}" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Số điện thoại"/>
+            <TextBox Text="{Binding Phone}" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Email"/>
+            <TextBox Text="{Binding Email}" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Phòng ban (DepartmentId)"/>
+            <ComboBox 
+    ItemsSource="{Binding Departments}" 
+    SelectedItem="{Binding SelectedDepartment}" 
+    DisplayMemberPath="DepartmentName" 
+    SelectedValuePath="DepartmentId"
+    Margin="0,5,0,10"/>
+
+            <TextBlock Text="Chức vụ"/>
+            <TextBox Text="{Binding Position}" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Lương cơ bản"/>
+            <TextBox Text="{Binding BaseSalary}" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Ngày bắt đầu"/>
+            <DatePicker SelectedDate="{Binding StartDatePicker, UpdateSourceTrigger=PropertyChanged}" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Avatar URL"/>
+            <TextBox Text="{Binding AvatarUrl}" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Username"/>
+            <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Password"/>
+            <PasswordBox x:Name="PasswordBox" Margin="0,5,0,10" PasswordChanged="PasswordBox_PasswordChanged"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Hủy" Width="80" Margin="5" Click="Cancel_Click"/>
+            <Button Content="Lưu" Width="80" Margin="5" Click="Save_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

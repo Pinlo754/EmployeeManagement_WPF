@@ -1,0 +1,166 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB3D0188-DAF8-4065-B693-8191873CF36A}|Models\\Models.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement\\models\\entities\\leaf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB3D0188-DAF8-4065-B693-8191873CF36A}|Models\\Models.csproj|solutionrelative:models\\entities\\leaf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement\\employeemanagement\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement\\employeemanagement\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement\\employeemanagement\\notificationmanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\notificationmanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement\\employeemanagement\\notificationmanagementwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\notificationmanagementwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement\\employeemanagement\\notificationformwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\notificationformwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement\\employeemanagement\\notificationformwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\notificationformwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB3D0188-DAF8-4065-B693-8191873CF36A}|Models\\Models.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement\\models\\repositories\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB3D0188-DAF8-4065-B693-8191873CF36A}|Models\\Models.csproj|solutionrelative:models\\repositories\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB3D0188-DAF8-4065-B693-8191873CF36A}|Models\\Models.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement\\models\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB3D0188-DAF8-4065-B693-8191873CF36A}|Models\\Models.csproj|solutionrelative:models\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Leaf.cs",
+              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\Models\\Entities\\Leaf.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Leaf.cs",
+              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\Models\\Entities\\Leaf.cs",
+              "RelativeToolTip": "Models\\Entities\\Leaf.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T15:25:01.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\EmployeeManagement\\AdminWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\AdminWindow.xaml.cs",
+              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\EmployeeManagement\\AdminWindow.xaml.cs",
+              "RelativeToolTip": "EmployeeManagement\\AdminWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T15:16:43.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminWindow.xaml",
+              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\EmployeeManagement\\AdminWindow.xaml",
+              "RelativeDocumentMoniker": "EmployeeManagement\\AdminWindow.xaml",
+              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\EmployeeManagement\\AdminWindow.xaml",
+              "RelativeToolTip": "EmployeeManagement\\AdminWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-12T15:16:03.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotificationManagementWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\EmployeeManagement\\NotificationManagementWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\NotificationManagementWindow.xaml.cs",
+              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\EmployeeManagement\\NotificationManagementWindow.xaml.cs",
+              "RelativeToolTip": "EmployeeManagement\\NotificationManagementWindow.xaml.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAcwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T15:15:12.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NotificationManagementWindow.xaml",
+              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\EmployeeManagement\\NotificationManagementWindow.xaml",
+              "RelativeDocumentMoniker": "EmployeeManagement\\NotificationManagementWindow.xaml",
+              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\EmployeeManagement\\NotificationManagementWindow.xaml",
+              "RelativeToolTip": "EmployeeManagement\\NotificationManagementWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-12T15:14:42.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NotificationFormWindow.xaml",
+              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\EmployeeManagement\\NotificationFormWindow.xaml",
+              "RelativeDocumentMoniker": "EmployeeManagement\\NotificationFormWindow.xaml",
+              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\EmployeeManagement\\NotificationFormWindow.xaml",
+              "RelativeToolTip": "EmployeeManagement\\NotificationFormWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-12T15:12:35.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NotificationFormWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\EmployeeManagement\\NotificationFormWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\NotificationFormWindow.xaml.cs",
+              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\EmployeeManagement\\NotificationFormWindow.xaml.cs",
+              "RelativeToolTip": "EmployeeManagement\\NotificationFormWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T15:13:32.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NotificationRepository.cs",
+              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\Models\\Repositories\\NotificationRepository.cs",
+              "RelativeDocumentMoniker": "Models\\Repositories\\NotificationRepository.cs",
+              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\Models\\Repositories\\NotificationRepository.cs",
+              "RelativeToolTip": "Models\\Repositories\\NotificationRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAUwCsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T15:11:10.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DepartmentRepository.cs",
+              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\Models\\Repositories\\DepartmentRepository.cs",
+              "RelativeDocumentMoniker": "Models\\Repositories\\DepartmentRepository.cs",
+              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement\\Models\\Repositories\\DepartmentRepository.cs",
+              "RelativeToolTip": "Models\\Repositories\\DepartmentRepository.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAswFAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T15:08:09.127Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

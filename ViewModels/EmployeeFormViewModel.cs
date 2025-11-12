@@ -1,7 +1,9 @@
 ﻿using Models.Entities;
 using Models.Repositories;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace ViewModels
@@ -20,11 +22,8 @@ namespace ViewModels
             if (Employee.DepartmentId.HasValue)
                 SelectedDepartment = Departments.FirstOrDefault(d => d.DepartmentId == Employee.DepartmentId.Value);
 
-            // Load username nếu employee có account
             if (Employee.Account != null)
-            {
                 Username = Employee.Account.Username;
-            }
         }
 
         public Employee Employee { get; set; }
@@ -59,10 +58,7 @@ namespace ViewModels
                    : null;
             set
             {
-                if (value.HasValue)
-                    Employee.DateOfBirth = DateOnly.FromDateTime(value.Value);
-                else
-                    Employee.DateOfBirth = null;
+                Employee.DateOfBirth = value.HasValue ? DateOnly.FromDateTime(value.Value) : null;
                 OnPropertyChanged();
             }
         }
@@ -110,10 +106,7 @@ namespace ViewModels
                    : (DateTime?)null;
             set
             {
-                if (value.HasValue)
-                    Employee.StartDate = DateOnly.FromDateTime(value.Value);
-                else
-                    Employee.StartDate = null;
+                Employee.StartDate = value.HasValue ? DateOnly.FromDateTime(value.Value) : null;
                 OnPropertyChanged();
             }
         }
@@ -161,10 +154,49 @@ namespace ViewModels
 
         private string HashPassword(string password)
         {
-            // Demo hash, thực tế nên dùng BCrypt
             return Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(password));
         }
 
+        // ================================
+        // Cập nhật Employee và log
+        // ================================
+        public bool UpdateEmployee(EmployeeRepository employeeRepo, ActivityLogRepository logRepo, int currentUserId)
+        {
+            try
+            {
+                PrepareAccount(); // Cập nhật account trước khi save
+
+                var existing = employeeRepo.GetById(Employee.EmployeeId);
+                if (existing != null)
+                {
+                    existing.FullName = Employee.FullName;
+                    existing.DepartmentId = Employee.DepartmentId;
+                    existing.Gender = Employee.Gender;
+                    existing.Address = Employee.Address;
+                    existing.Phone = Employee.Phone;
+                    existing.Email = Employee.Email;
+                    existing.Position = Employee.Position;
+                    existing.BaseSalary = Employee.BaseSalary;
+                    existing.StartDate = Employee.StartDate;
+                    existing.DateOfBirth = Employee.DateOfBirth;
+                    existing.AvatarUrl = Employee.AvatarUrl;
+                    existing.Account = Employee.Account;
+
+                    employeeRepo.Update(existing);
+                    logRepo.LogAction(currentUserId, "Update", "Employee", existing.EmployeeId, $"Cập nhật nhân viên {existing.FullName}");
+                }
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        // ================================
+        // PropertyChanged
+        // ================================
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));

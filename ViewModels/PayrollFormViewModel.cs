@@ -3,8 +3,8 @@ using Models.Repositories;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
+using ViewModels.Helper;
 
 namespace ViewModels
 {
@@ -19,10 +19,7 @@ namespace ViewModels
         public RelayCommand SaveCommand { get; }
         public RelayCommand CancelCommand { get; }
 
-        // Sự kiện hiển thị thông báo ra View
         public event Action<string>? ShowMessage;
-
-        // Sự kiện yêu cầu đóng cửa sổ (true nếu lưu thành công, false nếu hủy)
         public event Action<bool>? RequestClose;
 
         public PayrollFormViewModel(PayrollRepository payrollRepo, EmployeeRepository employeeRepo, Payroll? payroll = null)
@@ -30,14 +27,8 @@ namespace ViewModels
             _payrollRepo = payrollRepo;
             _employeeRepo = employeeRepo;
 
-            // Lấy danh sách nhân viên để chọn
             Employees = new ObservableCollection<Employee>(_employeeRepo.GetAll());
-
-            // Nếu có payroll (sửa), thì binding dữ liệu cũ; nếu không thì tạo mới
-            Payroll = payroll ?? new Payroll
-            {
-                PayDate = DateOnly.FromDateTime(DateTime.Now)
-            };
+            Payroll = payroll ?? new Payroll { PayDate = DateOnly.FromDateTime(DateTime.Now) };
 
             SaveCommand = new RelayCommand(_ => Save());
             CancelCommand = new RelayCommand(_ => Cancel());
@@ -51,11 +42,8 @@ namespace ViewModels
                 return;
             }
 
-            // Tính tổng thu nhập
-            Payroll.TotalIncome = (Payroll.BaseSalary ?? 0)
-                                + (Payroll.Allowances ?? 0)
-                                + (Payroll.Bonuses ?? 0)
-                                - (Payroll.Penalties ?? 0);
+            Payroll.TotalIncome = (Payroll.BaseSalary ?? 0) + (Payroll.Allowances ?? 0)
+                                + (Payroll.Bonuses ?? 0) - (Payroll.Penalties ?? 0);
 
             if (Payroll.PayrollId == 0)
                 _payrollRepo.Add(Payroll);

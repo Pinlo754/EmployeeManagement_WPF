@@ -1,10 +1,11 @@
 ﻿using ClosedXML.Excel;
+using Microsoft.Win32;
 using Models.Entities;
 using Models.Repositories;
+using System.Linq;
 using System.Windows;
 using ViewModels;
-using Microsoft.Win32;
-using System.Linq;
+using ViewModels.Helper;
 
 namespace EmployeeManagement
 {
@@ -13,23 +14,35 @@ namespace EmployeeManagement
         private readonly EmployeeManagementContext _context;
         private readonly PayrollRepository _payrollRepo;
         private readonly EmployeeRepository _employeeRepo;
+        private readonly ActivityLogRepository _logRepo;
         private readonly PayrollViewModel _viewModel;
 
         public PayrollManagementWindow()
         {
             InitializeComponent();
+            if (Session.CurrentUser == null)
+            {
+                MessageBox.Show("Chưa có người dùng đăng nhập!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                Close();
+                return;
+            }
 
             _context = new EmployeeManagementContext();
+<<<<<<< Updated upstream
             _payrollRepo = new PayrollRepository(_context, 1);
             _employeeRepo = new EmployeeRepository(_context, 1);
+=======
+            _payrollRepo = new PayrollRepository(_context);
+            _employeeRepo = new EmployeeRepository(_context);
+            _logRepo = new ActivityLogRepository(_context);
+>>>>>>> Stashed changes
 
-            _viewModel = new PayrollViewModel(_payrollRepo, _employeeRepo);
+            _viewModel = new PayrollViewModel(_payrollRepo, _employeeRepo, Session.CurrentUser.AccountId);
             DataContext = _viewModel;
 
-            // Gắn event ShowMessage (thay cho MessageBox)
-            _viewModel.ShowMessage += message =>
+            _viewModel.ShowMessage += msg =>
             {
-                MessageBox.Show(message, "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(msg, "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
             };
         }
 
@@ -37,9 +50,7 @@ namespace EmployeeManagement
         {
             var form = new PayrollFormWindow(_context);
             form.Owner = this;
-            var result = form.ShowDialog();
-
-            if (result == true)
+            if (form.ShowDialog() == true)
                 _viewModel.LoadPayrolls();
         }
 
@@ -53,9 +64,7 @@ namespace EmployeeManagement
 
             var form = new PayrollFormWindow(_context, _viewModel.SelectedPayroll);
             form.Owner = this;
-            var result = form.ShowDialog();
-
-            if (result == true)
+            if (form.ShowDialog() == true)
                 _viewModel.LoadPayrolls();
         }
 
@@ -70,20 +79,13 @@ namespace EmployeeManagement
             if (MessageBox.Show("Bạn có chắc muốn xóa bảng lương này?", "Xác nhận",
                 MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
-                _payrollRepo.Delete(_viewModel.SelectedPayroll.PayrollId);
-                _viewModel.LoadPayrolls();
-                MessageBox.Show("Đã xóa bảng lương thành công!");
+                _viewModel.DeletePayroll();
             }
         }
 
         private void ClearFilter_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is PayrollViewModel vm)
-            {
-                vm.SelectedEmployee = null;
-                vm.SelectedMonth = null;
-                vm.SelectedQuarter = null;
-            }
+            _viewModel.ClearFilter();
         }
 
         private void ExportExcel_Click(object sender, RoutedEventArgs e)
@@ -94,7 +96,6 @@ namespace EmployeeManagement
                 return;
             }
 
-            // Mở SaveFileDialog để chọn nơi lưu
             var saveFileDialog = new SaveFileDialog
             {
                 Filter = "Excel Workbook|*.xlsx",
@@ -106,40 +107,39 @@ namespace EmployeeManagement
                 try
                 {
                     using var workbook = new XLWorkbook();
-                    var worksheet = workbook.Worksheets.Add("Bảng Lương");
+                    var ws = workbook.Worksheets.Add("Bảng Lương");
 
-                    // Tiêu đề cột
-                    worksheet.Cell(1, 1).Value = "ID";
-                    worksheet.Cell(1, 2).Value = "Mã NV";
-                    worksheet.Cell(1, 3).Value = "Họ tên";
-                    worksheet.Cell(1, 4).Value = "Lương cơ bản";
-                    worksheet.Cell(1, 5).Value = "Phụ cấp";
-                    worksheet.Cell(1, 6).Value = "Thưởng";
-                    worksheet.Cell(1, 7).Value = "Phạt";
-                    worksheet.Cell(1, 8).Value = "Tổng thu nhập";
-                    worksheet.Cell(1, 9).Value = "Ngày trả";
+                    ws.Cell(1, 1).Value = "ID";
+                    ws.Cell(1, 2).Value = "Mã NV";
+                    ws.Cell(1, 3).Value = "Họ tên";
+                    ws.Cell(1, 4).Value = "Lương cơ bản";
+                    ws.Cell(1, 5).Value = "Phụ cấp";
+                    ws.Cell(1, 6).Value = "Thưởng";
+                    ws.Cell(1, 7).Value = "Phạt";
+                    ws.Cell(1, 8).Value = "Tổng thu nhập";
+                    ws.Cell(1, 9).Value = "Ngày trả";
 
                     int row = 2;
                     foreach (var p in _viewModel.Payrolls)
                     {
-                        worksheet.Cell(row, 1).Value = p.PayrollId;
-                        worksheet.Cell(row, 2).Value = p.EmployeeId;
-                        worksheet.Cell(row, 3).Value = p.Employee?.FullName;
-                        worksheet.Cell(row, 4).Value = p.BaseSalary;
-                        worksheet.Cell(row, 5).Value = p.Allowances;
-                        worksheet.Cell(row, 6).Value = p.Bonuses;
-                        worksheet.Cell(row, 7).Value = p.Penalties;
-                        worksheet.Cell(row, 8).Value = p.TotalIncome;
-                        worksheet.Cell(row, 9).Value = p.PayDate?.ToString("dd/MM/yyyy"); // nếu dùng DateOnly?
+                        ws.Cell(row, 1).Value = p.PayrollId;
+                        ws.Cell(row, 2).Value = p.EmployeeId;
+                        ws.Cell(row, 3).Value = p.Employee?.FullName;
+                        ws.Cell(row, 4).Value = p.BaseSalary;
+                        ws.Cell(row, 5).Value = p.Allowances;
+                        ws.Cell(row, 6).Value = p.Bonuses;
+                        ws.Cell(row, 7).Value = p.Penalties;
+                        ws.Cell(row, 8).Value = p.TotalIncome;
+                        ws.Cell(row, 9).Value = p.PayDate?.ToString("dd/MM/yyyy");
                         row++;
                     }
 
-                    worksheet.Columns().AdjustToContents(); // tự động rộng cột
+                    ws.Columns().AdjustToContents();
                     workbook.SaveAs(saveFileDialog.FileName);
 
                     MessageBox.Show("Xuất Excel thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-                catch (Exception ex)
+                catch (System.Exception ex)
                 {
                     MessageBox.Show($"Lỗi khi xuất Excel: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }

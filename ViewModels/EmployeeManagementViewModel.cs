@@ -10,20 +10,31 @@ namespace ViewModels
 {
     public class EmployeeManagementViewModel : INotifyPropertyChanged
     {
-        private readonly EmployeeRepository _employeeRepo;
+        public readonly EmployeeRepository EmployeeRepo;
+        public readonly ActivityLogRepository LogRepo;
+
         private readonly DepartmentRepository _departmentRepo;
+        private readonly int _currentUserId;
 
         private ObservableCollection<Employee> _allEmployees;
 
-        public EmployeeManagementViewModel(EmployeeRepository empRepo, DepartmentRepository depRepo)
+        public EmployeeManagementViewModel(EmployeeRepository empRepo,
+                                           DepartmentRepository depRepo,
+                                           ActivityLogRepository logRepo,
+                                           int currentUserId)
         {
-            _employeeRepo = empRepo;
+            EmployeeRepo = empRepo;
             _departmentRepo = depRepo;
+            LogRepo = logRepo;
+            _currentUserId = currentUserId;
 
-            _allEmployees = new ObservableCollection<Employee>(_employeeRepo.GetAll() ?? new System.Collections.Generic.List<Employee>());
+            // Load tất cả nhân viên
+            _allEmployees = new ObservableCollection<Employee>(EmployeeRepo.GetAll() ?? new System.Collections.Generic.List<Employee>());
             Employees = new ObservableCollection<Employee>(_allEmployees);
 
+            // Load phòng ban
             Departments = new ObservableCollection<Department>(_departmentRepo.GetAll() ?? new System.Collections.Generic.List<Department>());
+
             Genders = new ObservableCollection<string> { "Nam", "Nữ", "Khác" };
         }
 
@@ -38,7 +49,9 @@ namespace ViewModels
             set { _selectedEmployee = value; OnPropertyChanged(); }
         }
 
-        // Search & Filter properties
+        // ====================
+        // FILTER
+        // ====================
         private string _searchName = "";
         public string SearchName
         {
@@ -88,7 +101,7 @@ namespace ViewModels
             set { _startDateTo = value; OnPropertyChanged(); ApplyFilter(); }
         }
 
-        private void ApplyFilter()
+        public void ApplyFilter()
         {
             var filtered = _allEmployees.AsEnumerable();
 
@@ -130,30 +143,54 @@ namespace ViewModels
             ApplyFilter();
         }
 
-        // CRUD
+        // ====================
+        // CRUD + Log
+        // ====================
         public void AddEmployee(Employee emp)
         {
             if (emp == null) return;
-            _employeeRepo.Add(emp);
+            EmployeeRepo.Add(emp);
             _allEmployees.Add(emp);
             ApplyFilter();
+            LogRepo.LogAction(_currentUserId, "Add", "Employee", emp.EmployeeId, $"Thêm nhân viên {emp.FullName}");
         }
 
         public void EditEmployee(Employee emp)
         {
             if (emp == null) return;
-            _employeeRepo.Update(emp);
-            ApplyFilter();
+
+            var existing = EmployeeRepo.GetById(emp.EmployeeId);
+            if (existing != null)
+            {
+                existing.FullName = emp.FullName;
+                existing.DepartmentId = emp.DepartmentId;
+                existing.Gender = emp.Gender;
+                existing.BaseSalary = emp.BaseSalary;
+                existing.StartDate = emp.StartDate;
+
+                EmployeeRepo.Update(existing);
+                ApplyFilter();
+                LogRepo.LogAction(_currentUserId, "Update", "Employee", existing.EmployeeId, $"Cập nhật nhân viên {existing.FullName}");
+            }
         }
 
         public void DeleteEmployee(Employee emp)
         {
             if (emp == null) return;
-            _employeeRepo.Delete(emp.EmployeeId);
-            _allEmployees.Remove(emp);
-            ApplyFilter();
+
+            var existing = EmployeeRepo.GetById(emp.EmployeeId);
+            if (existing != null)
+            {
+                EmployeeRepo.Delete(existing.EmployeeId);
+                _allEmployees.Remove(existing);
+                ApplyFilter();
+                LogRepo.LogAction(_currentUserId, "Delete", "Employee", existing.EmployeeId, $"Xóa nhân viên {existing.FullName}");
+            }
         }
 
+        // ====================
+        // PropertyChanged
+        // ====================
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));

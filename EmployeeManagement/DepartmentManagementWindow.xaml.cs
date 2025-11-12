@@ -4,6 +4,7 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using ViewModels;
+using ViewModels.Helper;
 
 namespace EmployeeManagement
 {
@@ -15,9 +16,16 @@ namespace EmployeeManagement
         {
             InitializeComponent();
 
+            if (Session.CurrentUser == null)
+            {
+                MessageBox.Show("Chưa có người dùng đăng nhập!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                Close();
+                return;
+            }
+
             // Khởi tạo Repository và ViewModel
             var depRepo = new DepartmentRepository(new EmployeeManagementContext());
-            _viewModel = new DepartmentManagementViewModel(depRepo);
+            _viewModel = new DepartmentManagementViewModel(depRepo, Session.CurrentUser.AccountId);
 
             DataContext = _viewModel;
 

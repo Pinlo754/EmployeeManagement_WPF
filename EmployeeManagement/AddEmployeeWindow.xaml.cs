@@ -1,10 +1,11 @@
 ﻿using Models.Entities;
 using Models.Repositories;
 using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 using ViewModels;
-using System.Linq;
+using ViewModels.Helper;
 
 namespace EmployeeManagement
 {
@@ -41,17 +42,17 @@ namespace EmployeeManagement
                 return;
             }
 
-            // Gán DepartmentId từ SelectedDepartment nếu có
-            if (_viewModel.SelectedDepartment != null)
-            {
-                _viewModel.Employee.DepartmentId = _viewModel.SelectedDepartment.DepartmentId;
-            }
+            _viewModel.PrepareAccount(); // gán username/password
 
-            _viewModel.PrepareAccount();
+            // Gọi trực tiếp Update vào DB
+            var empRepo = new EmployeeRepository(new EmployeeManagementContext());
+            var logRepo = new ActivityLogRepository(new EmployeeManagementContext());
+            _viewModel.UpdateEmployee(empRepo, logRepo, Session.CurrentUser.AccountId);
 
             this.DialogResult = true;
             this.Close();
         }
+
 
         private string ValidateInput()
         {

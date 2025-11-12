@@ -1,11 +1,12 @@
 ﻿using ClosedXML.Excel;
+using Microsoft.Win32;
 using Models.Entities;
 using Models.Repositories;
 using System;
 using System.Linq;
 using System.Windows;
 using ViewModels;
-using Microsoft.Win32;
+using ViewModels.Helper;
 
 namespace EmployeeManagement
 {
@@ -16,11 +17,21 @@ namespace EmployeeManagement
         public EmployeeManagementWindow()
         {
             InitializeComponent();
+<<<<<<< Updated upstream
 
             var empRepo = new EmployeeRepository(new EmployeeManagementContext(), 1);
+=======
+            if (Session.CurrentUser == null)
+            {
+                MessageBox.Show("Chưa có người dùng đăng nhập!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                Close();
+                return;
+            }
+            var empRepo = new EmployeeRepository(new EmployeeManagementContext());
+>>>>>>> Stashed changes
             var depRepo = new DepartmentRepository(new EmployeeManagementContext());
-
-            _viewModel = new EmployeeManagementViewModel(empRepo, depRepo);
+            var logRepo = new ActivityLogRepository(new EmployeeManagementContext());
+            _viewModel = new EmployeeManagementViewModel(empRepo, depRepo, logRepo, Session.CurrentUser.AccountId);
 
             DataContext = _viewModel;
         }
@@ -113,5 +124,49 @@ namespace EmployeeManagement
             }
         }
         #endregion
+
+        private void ImportExcel_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog
+            {
+                Filter = "Excel Workbook|*.xlsx;*.xls",
+                Title = "Chọn file Excel chứa danh sách nhân viên"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    using var workbook = new ClosedXML.Excel.XLWorkbook(openFileDialog.FileName);
+                    var worksheet = workbook.Worksheet(1); // Lấy sheet đầu tiên
+                    var rows = worksheet.RowsUsed().Skip(1); // Bỏ qua header
+
+                    foreach (var row in rows)
+                    {
+                        var emp = new Employee
+                        {
+                            FullName = row.Cell(2).GetString(),
+                            DateOfBirth = DateOnly.TryParse(row.Cell(3).GetString(), out var dob) ? dob : null,
+                            Gender = row.Cell(4).GetString(),
+                            DepartmentId = _viewModel.Departments.FirstOrDefault(d => d.DepartmentName == row.Cell(5).GetString())?.DepartmentId ?? 0,
+                            Position = row.Cell(6).GetString(),
+                            BaseSalary = decimal.TryParse(row.Cell(7).GetString(), out var salary) ? salary : 0,
+                            Phone = row.Cell(8).GetString(),
+                            Address = row.Cell(9).GetString(),
+                            StartDate = DateOnly.TryParse(row.Cell(10).GetString(), out var sd) ? sd : null
+                        };
+
+                        _viewModel.AddEmployee(emp);
+                    }
+
+                    MessageBox.Show("Import Excel thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi nhập Excel: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
     }
 }

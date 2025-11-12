@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\",
   "Documents": [
     {
@@ -9,6 +10,21 @@
     {
       "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement_wpf\\employeemanagement\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+=======
+  "WorkspaceRootPath": "D:\\AppData\\MS Visual Studio\\repos\\EmployeeManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|d:\\appdata\\ms visual studio\\repos\\employeemanagement\\employeemanagement\\employeemanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\employeemanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|d:\\appdata\\ms visual studio\\repos\\employeemanagement\\employeemanagement\\employeemanagementwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\employeemanagementwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EF3A91D-33E4-493A-8849-33DCF4B98CBC}|ViewModels\\ViewModels.csproj|d:\\appdata\\ms visual studio\\repos\\employeemanagement\\viewmodels\\employeemanagementviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EF3A91D-33E4-493A-8849-33DCF4B98CBC}|ViewModels\\ViewModels.csproj|solutionrelative:viewmodels\\employeemanagementviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 1,
+=======
+          "SelectedChildIndex": 17,
+>>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,6 +58,7 @@
               "EditorCaption": ""
             },
             {
+<<<<<<< Updated upstream
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "AdminWindow.xaml",
@@ -47,6 +68,100 @@
               "RelativeToolTip": "EmployeeManagement\\AdminWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-11-12T16:09:21.191Z"
+=======
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1924764005:0:{13143d73-808b-4a2f-bebb-ccbe9c93fe37}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeManagementViewModel.cs",
+              "DocumentMoniker": "D:\\AppData\\MS Visual Studio\\repos\\EmployeeManagement\\ViewModels\\EmployeeManagementViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\EmployeeManagementViewModel.cs",
+              "ToolTip": "D:\\AppData\\MS Visual Studio\\repos\\EmployeeManagement\\ViewModels\\EmployeeManagementViewModel.cs",
+              "RelativeToolTip": "ViewModels\\EmployeeManagementViewModel.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAqwMYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T17:01:06.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeManagementWindow.xaml.cs",
+              "DocumentMoniker": "D:\\AppData\\MS Visual Studio\\repos\\EmployeeManagement\\EmployeeManagement\\EmployeeManagementWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\EmployeeManagementWindow.xaml.cs",
+              "ToolTip": "D:\\AppData\\MS Visual Studio\\repos\\EmployeeManagement\\EmployeeManagement\\EmployeeManagementWindow.xaml.cs",
+              "RelativeToolTip": "EmployeeManagement\\EmployeeManagementWindow.xaml.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAKQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T17:00:56.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeManagementWindow.xaml",
+              "DocumentMoniker": "D:\\AppData\\MS Visual Studio\\repos\\EmployeeManagement\\EmployeeManagement\\EmployeeManagementWindow.xaml",
+              "RelativeDocumentMoniker": "EmployeeManagement\\EmployeeManagementWindow.xaml",
+              "ToolTip": "D:\\AppData\\MS Visual Studio\\repos\\EmployeeManagement\\EmployeeManagement\\EmployeeManagementWindow.xaml",
+              "RelativeToolTip": "EmployeeManagement\\EmployeeManagementWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-12T17:00:37.609Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             }
           ]
         }

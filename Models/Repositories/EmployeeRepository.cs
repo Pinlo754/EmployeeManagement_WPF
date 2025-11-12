@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Models.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,14 +8,15 @@ namespace Models.Repositories
     public class EmployeeRepository
     {
         private readonly EmployeeManagementContext _context;
+<<<<<<< Updated upstream
         private readonly ActivityLogRepository _logRepo;
         private readonly int _currentUserId; 
+=======
+>>>>>>> Stashed changes
 
-        public EmployeeRepository(EmployeeManagementContext context, int currentUserId)
+        public EmployeeRepository(EmployeeManagementContext context)
         {
             _context = context;
-            _logRepo = new ActivityLogRepository(context);
-            _currentUserId = currentUserId;
         }
 
         // Lấy toàn bộ nhân viên
@@ -43,9 +43,6 @@ namespace Models.Repositories
 
             _context.Employees.Add(employee);
             _context.SaveChanges();
-
-            // Ghi log
-            _logRepo.LogAction(_currentUserId, "Add", "Employee", employee.EmployeeId, $"Thêm nhân viên: {employee.FullName}");
         }
 
         // Cập nhật nhân viên
@@ -77,13 +74,10 @@ namespace Models.Repositories
                 existing.Account.FullName = employee.Account.FullName;
                 existing.Account.Role = employee.Account.Role;
                 existing.Account.IsActive = employee.Account.IsActive;
-                existing.Account.CreatedAt = employee.Account.CreatedAt ?? DateTime.Now;
+                existing.Account.CreatedAt = employee.Account.CreatedAt ?? System.DateTime.Now;
             }
 
             _context.SaveChanges();
-
-            // Ghi log
-            _logRepo.LogAction(_currentUserId, "Update", "Employee", employee.EmployeeId, $"Cập nhật nhân viên: {employee.FullName}");
         }
 
         // Xóa nhân viên
@@ -99,9 +93,6 @@ namespace Models.Repositories
 
             _context.Employees.Remove(employee);
             _context.SaveChanges();
-
-            // Ghi log
-            _logRepo.LogAction(_currentUserId, "Delete", "Employee", employee.EmployeeId, $"Xóa nhân viên: {employee.FullName}");
         }
     }
 }

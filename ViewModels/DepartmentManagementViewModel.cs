@@ -11,6 +11,8 @@ namespace ViewModels
     {
         private readonly DepartmentRepository _departmentRepo;
         private readonly EmployeeRepository _employeeRepo;
+        private readonly ActivityLogRepository _logRepo;
+        private readonly int _currentUserId;
 
         public ObservableCollection<Department> Departments { get; set; }
         public ObservableCollection<Employee> EmployeesInDepartment { get; set; }
@@ -27,13 +29,19 @@ namespace ViewModels
             }
         }
 
-        // ================================
-        //          CONSTRUCTOR
-        // ================================
-        public DepartmentManagementViewModel(DepartmentRepository departmentRepo)
+        public DepartmentManagementViewModel(
+            DepartmentRepository departmentRepo,
+            int currentUserId)
         {
             _departmentRepo = departmentRepo;
+<<<<<<< Updated upstream
             _employeeRepo = new EmployeeRepository(new EmployeeManagementContext(), 1);
+=======
+            _currentUserId = currentUserId;
+            _employeeRepo = new EmployeeRepository(new EmployeeManagementContext());
+            _logRepo = new ActivityLogRepository(new EmployeeManagementContext());
+
+>>>>>>> Stashed changes
             Departments = new ObservableCollection<Department>(_departmentRepo.GetAll());
             EmployeesInDepartment = new ObservableCollection<Employee>();
         }
@@ -48,6 +56,9 @@ namespace ViewModels
             _departmentRepo.Add(dep);
             Departments.Add(dep);
             OnPropertyChanged(nameof(Departments));
+
+            // Ghi log
+            _logRepo.LogAction(_currentUserId, "Add", "Department", dep.DepartmentId, $"Thêm phòng ban {dep.DepartmentName}");
         }
 
         // ================================
@@ -66,6 +77,9 @@ namespace ViewModels
                 Departments[index] = dep;
                 OnPropertyChanged(nameof(Departments));
             }
+
+            // Ghi log
+            _logRepo.LogAction(_currentUserId, "Update", "Department", dep.DepartmentId, $"Cập nhật phòng ban {dep.DepartmentName}");
         }
 
         // ================================
@@ -75,11 +89,17 @@ namespace ViewModels
         {
             if (SelectedDepartment == null) return;
 
-            _departmentRepo.Delete(SelectedDepartment.DepartmentId);
+            var depId = SelectedDepartment.DepartmentId;
+            var depName = SelectedDepartment.DepartmentName;
+
+            _departmentRepo.Delete(depId);
             Departments.Remove(SelectedDepartment);
             EmployeesInDepartment.Clear();
             SelectedDepartment = null;
             OnPropertyChanged(nameof(Departments));
+
+            // Ghi log
+            _logRepo.LogAction(_currentUserId, "Delete", "Department", depId, $"Xóa phòng ban {depName}");
         }
 
         // ================================
@@ -121,13 +141,17 @@ namespace ViewModels
             var existing = _employeeRepo.GetById(emp.EmployeeId);
             if (existing != null)
             {
+                var oldDeptId = existing.DepartmentId;
                 existing.DepartmentId = emp.DepartmentId;
                 _employeeRepo.Update(existing);
 
                 LoadEmployeesInDepartment();
+
+                // Ghi log
+                _logRepo.LogAction(_currentUserId, "Update", "Employee", emp.EmployeeId,
+                    $"Chuyển nhân viên {emp.FullName} từ phòng {oldDeptId} sang phòng {emp.DepartmentId}");
             }
         }
-
 
         // ================================
         //     THÔNG BÁO THAY ĐỔI DỮ LIỆU

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using ViewModels.Helper;
 namespace ViewModels
 {
     public class LoginViewModel : INotifyPropertyChanged
@@ -46,7 +47,7 @@ namespace ViewModels
             {
                 // Gọi event LoginSuccess
                 LoginSuccess?.Invoke(account);
-
+                Session.CurrentUser = account;
                 // Thông báo login thành công
                 ShowMessage?.Invoke($"Đăng nhập thành công với quyền {account.Role}");
             }

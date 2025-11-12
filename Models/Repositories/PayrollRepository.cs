@@ -8,14 +8,10 @@ namespace Models.Repositories
     public class PayrollRepository
     {
         private readonly EmployeeManagementContext _context;
-        private readonly ActivityLogRepository _logRepo;
-        private readonly int _currentUserId; // ID người thao tác
 
-        public PayrollRepository(EmployeeManagementContext context, int currentUserId)
+        public PayrollRepository(EmployeeManagementContext context)
         {
             _context = context;
-            _logRepo = new ActivityLogRepository(context);
-            _currentUserId = currentUserId;
         }
 
         // Lấy tất cả bảng lương
@@ -72,10 +68,6 @@ namespace Models.Repositories
             }
 
             _context.SaveChanges();
-
-            // Ghi log
-            _logRepo.LogAction(_currentUserId, "Add", "Payroll", payroll.PayrollId,
-                $"Thêm bảng lương cho nhân viên: {payroll.Employee?.FullName} - Tổng thu nhập: {payroll.TotalIncome}");
         }
 
         // Cập nhật bảng lương
@@ -102,10 +94,6 @@ namespace Models.Repositories
             }
 
             _context.SaveChanges();
-
-            // Ghi log
-            _logRepo.LogAction(_currentUserId, "Update", "Payroll", payroll.PayrollId,
-                $"Cập nhật bảng lương cho nhân viên: {existing.Employee?.FullName} - Tổng thu nhập: {existing.TotalIncome}");
         }
 
         // Xóa bảng lương
@@ -116,10 +104,6 @@ namespace Models.Repositories
 
             _context.Payrolls.Remove(existing);
             _context.SaveChanges();
-
-            // Ghi log
-            _logRepo.LogAction(_currentUserId, "Delete", "Payroll", existing.PayrollId,
-                $"Xóa bảng lương của nhân viên: {existing.Employee?.FullName} - Tổng thu nhập: {existing.TotalIncome}");
         }
     }
 }

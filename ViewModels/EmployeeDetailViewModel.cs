@@ -9,10 +9,16 @@ namespace ViewModels
     public class EmployeeDetailViewModel : INotifyPropertyChanged
     {
         private readonly EmployeeRepository _repo;
+        private readonly ActivityLogRepository _logRepo;
+        private readonly int _currentUserId;
+
         public event Action? EmployeeDeleted;
-        public EmployeeDetailViewModel(EmployeeRepository repo, Employee employee)
+
+        public EmployeeDetailViewModel(EmployeeRepository repo, ActivityLogRepository logRepo, int currentUserId, Employee employee)
         {
             _repo = repo;
+            _logRepo = logRepo;
+            _currentUserId = currentUserId;
             Employee = employee;
         }
 
@@ -29,27 +35,28 @@ namespace ViewModels
         // Event yêu cầu xác nhận xóa
         public event Func<string, bool>? ConfirmDelete;
 
+        // ================================
+        // Xóa nhân viên
+        // ================================
         public bool DeleteEmployee()
         {
             if (Employee == null) return false;
 
-            // Kiểm tra xem View có trả về true khi xác nhận xóa
             bool confirmed = ConfirmDelete?.Invoke($"Bạn có chắc muốn xóa nhân viên {Employee.FullName}?") ?? false;
-
             if (!confirmed) return false;
 
             try
             {
-                // Lấy employee đầy đủ với các navigation property để xóa an toàn
                 var emp = _repo.GetById(Employee.EmployeeId);
                 if (emp == null) return false;
 
-                // Nếu cần, xóa các collection liên quan
+                // Xóa các collection liên quan nếu có
                 emp.Leaves.Clear();
                 emp.Payrolls.Clear();
                 emp.Timesheets.Clear();
 
                 _repo.Delete(emp.EmployeeId);
+                _logRepo.LogAction(_currentUserId, "Delete", "Employee", emp.EmployeeId, $"Xóa nhân viên {emp.FullName}");
 
                 ShowMessage?.Invoke("Xóa nhân viên thành công.");
                 EmployeeDeleted?.Invoke();
@@ -62,6 +69,51 @@ namespace ViewModels
             }
         }
 
+        // ================================
+        // Cập nhật nhân viên
+        // ================================
+        public bool UpdateEmployee()
+        {
+            if (Employee == null) return false;
+
+            try
+            {
+                var existing = _repo.GetById(Employee.EmployeeId);
+                if (existing != null)
+                {
+                    existing.FullName = Employee.FullName;
+                    existing.DepartmentId = Employee.DepartmentId;
+                    existing.Gender = Employee.Gender;
+                    existing.Address = Employee.Address;
+                    existing.Phone = Employee.Phone;
+                    existing.Email = Employee.Email;
+                    existing.Position = Employee.Position;
+                    existing.BaseSalary = Employee.BaseSalary;
+                    existing.StartDate = Employee.StartDate;
+                    existing.DateOfBirth = Employee.DateOfBirth;
+                    existing.AvatarUrl = Employee.AvatarUrl;
+                    existing.Account = Employee.Account;
+
+                    _repo.Update(existing);
+                    _logRepo.LogAction(_currentUserId, "Update", "Employee", existing.EmployeeId, $"Cập nhật nhân viên {existing.FullName}");
+
+                    ShowMessage?.Invoke("Cập nhật nhân viên thành công.");
+                    return true;
+                }
+
+                ShowMessage?.Invoke("Không tìm thấy nhân viên để cập nhật.");
+                return false;
+            }
+            catch (Exception ex)
+            {
+                ShowMessage?.Invoke($"Lỗi khi cập nhật nhân viên: {ex.Message}");
+                return false;
+            }
+        }
+
+        // ================================
+        // PropertyChanged
+        // ================================
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));

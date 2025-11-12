@@ -39,10 +39,18 @@ namespace EmployeeManagement
             var payrollWindow = new PayrollManagementWindow();
             payrollWindow.Show();
         }
+<<<<<<< Updated upstream
         private void ManageNotifications_Click(object sender, RoutedEventArgs e)
         {
             var managementWindow = new NotificationManagementWindow(_account);
             managementWindow.ShowDialog();
+=======
+
+        private void ActivityLogs_Click(object sender, RoutedEventArgs e)
+        {
+            var activityLogWindow = new ActivityLogWindow();
+            activityLogWindow.Show();
+>>>>>>> Stashed changes
         }
     }
 }

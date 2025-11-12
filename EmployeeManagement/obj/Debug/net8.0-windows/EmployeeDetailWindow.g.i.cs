@@ -61,7 +61,7 @@ namespace EmployeeManagement {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EmployeeManagement;component/employeedetailwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EmployeeManagement;V1.0.0.0;component/employeedetailwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\EmployeeDetailWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

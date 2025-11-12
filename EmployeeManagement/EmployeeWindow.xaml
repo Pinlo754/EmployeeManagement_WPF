@@ -43,6 +43,8 @@
                 </StackPanel>
             </Expander>
 
+            <Button Content="Xin nghỉ phép" Height="40" Margin="0,5" Click="ApplyForLeave_Click"/>
+
         </StackPanel>
     </DockPanel>
 </Window>

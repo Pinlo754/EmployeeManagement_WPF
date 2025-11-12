@@ -1,0 +1,40 @@
+﻿<Window x:Class="EmployeeManagement.LeaveRequestFormWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tạo Đơn xin nghỉ phép" Height="350" Width="450"
+        WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Loại nghỉ phép:" Grid.Row="0" VerticalAlignment="Center" Margin="5"/>
+        <ComboBox x:Name="LeaveTypeComboBox" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Ngày bắt đầu:" Grid.Row="1" VerticalAlignment="Center" Margin="5"/>
+        <DatePicker x:Name="StartDatePicker" Grid.Row="1" Grid.Column="1" Margin="5"
+                    SelectedDateChanged="DatePicker_SelectedDateChanged"/>
+
+        <TextBlock Text="Ngày kết thúc:" Grid.Row="2" VerticalAlignment="Center" Margin="5"/>
+        <DatePicker x:Name="EndDatePicker" Grid.Row="2" Grid.Column="1" Margin="5"
+                    SelectedDateChanged="DatePicker_SelectedDateChanged"/>
+
+        <TextBlock Text="Tổng số ngày:" Grid.Row="3" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock x:Name="DaysCountText" Grid.Row="3" Grid.Column="1" Margin="5"
+                   Text="0" FontWeight="Bold" VerticalAlignment="Center"/>
+
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" 
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button x:Name="SubmitButton" Content="Nộp đơn" Width="80" Height="30" Margin="5" Click="SubmitButton_Click"/>
+            <Button x:Name="CancelButton" Content="Hủy" Width="80" Height="30" Margin="5" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>

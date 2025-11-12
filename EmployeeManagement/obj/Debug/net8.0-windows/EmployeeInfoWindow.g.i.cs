@@ -140,7 +140,7 @@ namespace EmployeeManagement {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EmployeeManagement;component/employeeinfowindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EmployeeManagement;V1.0.0.0;component/employeeinfowindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\EmployeeInfoWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

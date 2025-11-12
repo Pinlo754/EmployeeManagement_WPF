@@ -26,6 +26,8 @@
             <Button Content="Quản lý phòng ban" Height="40" Margin="0,5" Click="ManageDepartments_Click"/>
             <Button Content="Quản lý lương thưởng" Height="40" Margin="0,5" Click="ManagePayrolls_Click"/>
             <Button Content="Quản lý thông báo" Height="40" Margin="0,5" Click="ManageNotifications_Click"/>
+            <Button Content="Quản lý Chấm công" Height="40" Margin="0,5" Click="ManageTimesheets_Click"/>
+            <Button Content="Quản lý nghỉ phép" Height="40" Margin="0,5" Click="ManageLeave_Click"/>
         </StackPanel>
     </DockPanel>
 </Window>

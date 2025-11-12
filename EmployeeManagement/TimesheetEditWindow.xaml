@@ -1,0 +1,49 @@
+﻿<Window x:Class="EmployeeManagement.TimesheetEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Chỉnh sửa Chấm công" Height="450" Width="450"
+        WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Nhân viên:" FontWeight="Bold" Grid.Row="0" Margin="5"/>
+        <TextBlock x:Name="EmployeeNameText" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Ngày làm:" FontWeight="Bold" Grid.Row="1" Margin="5"/>
+        <TextBlock x:Name="WorkDateText" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Giờ Check In:" VerticalAlignment="Center" FontWeight="Bold" Grid.Row="2" Margin="5"/>
+        <TextBox x:Name="CheckInTextBox" Grid.Row="2" Grid.Column="1" Margin="5" ToolTip="Định dạng HH:mm:ss (ví dụ: 08:30:00)"/>
+
+        <TextBlock Text="Giờ Check Out:" VerticalAlignment="Center" FontWeight="Bold" Grid.Row="3" Margin="5"/>
+        <TextBox x:Name="CheckOutTextBox" Grid.Row="3" Grid.Column="1" Margin="5" ToolTip="Định dạng HH:mm:ss (ví dụ: 17:30:00)"/>
+
+        <TextBlock Text="Trạng thái:" VerticalAlignment="Center" FontWeight="Bold" Grid.Row="4" Margin="5"/>
+        <ComboBox x:Name="StatusComboBox" Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Giờ làm việc:" Grid.Row="5" Margin="5"/>
+        <TextBlock x:Name="HoursWorkedText" Grid.Row="5" Grid.Column="1" Margin="5" Text="..."/>
+
+        <TextBlock Text="Giờ Overtime:" Grid.Row="6" Margin="5"/>
+        <TextBlock x:Name="OvertimeHoursText" Grid.Row="6" Grid.Column="1" Margin="5" Text="..."/>
+
+        <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Orientation="Horizontal" 
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,15,0,0">
+            <Button x:Name="SaveButton" Content="Lưu" Width="80" Height="30" Margin="5" Click="SaveButton_Click"/>
+            <Button x:Name="CancelButton" Content="Hủy" Width="80" Height="30" Margin="5" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>

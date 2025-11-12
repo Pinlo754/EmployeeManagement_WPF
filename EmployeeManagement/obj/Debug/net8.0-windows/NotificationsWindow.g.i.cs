@@ -60,7 +60,7 @@ namespace EmployeeManagement {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EmployeeManagement;component/notificationswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EmployeeManagement;V1.0.0.0;component/notificationswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\NotificationsWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

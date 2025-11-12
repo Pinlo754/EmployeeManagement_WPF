@@ -44,5 +44,16 @@ namespace EmployeeManagement
             var managementWindow = new NotificationManagementWindow(_account);
             managementWindow.ShowDialog();
         }
+        private void ManageTimesheets_Click(object sender, RoutedEventArgs e)
+        {
+            var managementWindow = new TimesheetManagementWindow();
+            managementWindow.ShowDialog();
+        }
+
+        private void ManageLeave_Click(object sender, RoutedEventArgs e)
+        {
+            var managementWindow = new LeaveManagementWindow();
+            managementWindow.ShowDialog();
+        }
     }
 }

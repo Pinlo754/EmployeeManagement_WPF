@@ -231,5 +231,19 @@ namespace EmployeeManagement
                 MessageBox.Show($"Lỗi khi tải thông báo: {ex.Message}", "Lỗi hệ thống", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void ApplyForLeave_Click(object sender, RoutedEventArgs e)
+        {
+            if (_employee == null)
+            {
+                MessageBox.Show("Không tìm thấy hồ sơ nhân viên để nộp đơn.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Mở form mới và truyền thông tin nhân viên vào
+            LeaveRequestFormWindow form = new LeaveRequestFormWindow(_employee);
+            form.Owner = this;
+            form.ShowDialog();
+        }
     }
 }

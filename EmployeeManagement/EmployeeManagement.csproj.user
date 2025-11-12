@@ -20,13 +20,28 @@
     <Compile Update="EmployeeManagementWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="LeaveManagementWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LeaveRequestFormWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MonthlyReportWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PayrollFormWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PayrollManagementWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TimesheetEditWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TimesheetManagementWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

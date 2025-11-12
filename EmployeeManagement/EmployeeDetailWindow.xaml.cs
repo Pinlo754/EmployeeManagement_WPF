@@ -13,7 +13,7 @@ namespace EmployeeManagement
         {
             InitializeComponent();
 
-            var repo = new EmployeeRepository(new EmployeeManagementContext());
+            var repo = new EmployeeRepository(new EmployeeManagementContext(), 1);
             _viewModel = new EmployeeDetailViewModel(repo, employee);
 
             DataContext = _viewModel;
@@ -39,7 +39,7 @@ namespace EmployeeManagement
             if (editWindow.ShowDialog() == true)
             {
                 // Nếu sửa xong, reload dữ liệu từ DB
-                var repo = new EmployeeRepository(new EmployeeManagementContext());
+                var repo = new EmployeeRepository(new EmployeeManagementContext(), 1);
                 _viewModel.Employee = repo.GetById(_viewModel.Employee.EmployeeId);
             }
         }

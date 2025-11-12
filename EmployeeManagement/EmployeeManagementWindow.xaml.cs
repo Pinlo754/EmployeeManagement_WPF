@@ -17,7 +17,7 @@ namespace EmployeeManagement
         {
             InitializeComponent();
 
-            var empRepo = new EmployeeRepository(new EmployeeManagementContext());
+            var empRepo = new EmployeeRepository(new EmployeeManagementContext(), 1);
             var depRepo = new DepartmentRepository(new EmployeeManagementContext());
 
             _viewModel = new EmployeeManagementViewModel(empRepo, depRepo);

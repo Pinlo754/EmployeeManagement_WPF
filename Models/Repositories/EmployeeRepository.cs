@@ -10,7 +10,7 @@ namespace Models.Repositories
     {
         private readonly EmployeeManagementContext _context;
         private readonly ActivityLogRepository _logRepo;
-        private readonly int _currentUserId; // ID người đang thao tác (AccountId)
+        private readonly int _currentUserId; 
 
         public EmployeeRepository(EmployeeManagementContext context, int currentUserId)
         {

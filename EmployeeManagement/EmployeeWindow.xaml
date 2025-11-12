@@ -12,20 +12,37 @@
                        VerticalAlignment="Center" 
                        Margin="10,0,0,0"
                        Text="Xin chào, User"/>
+            
+            <Button Content="Xem thông báo" Height="40" Margin="5,5" Click="ViewNotifications_Click" RenderTransformOrigin="0.907,0.593"/>
 
-            <Button Content="Logout" 
-                    DockPanel.Dock="Right"
-                    Width="80" 
-                    Height="30" 
-                    Margin="500,10,10,10"
-                    VerticalAlignment="Center"
-                    Click="Logout_Click"/>
+<Button Content="Logout" 
+                DockPanel.Dock="Right"  Width="80" 
+                Height="30" 
+                VerticalAlignment="Center"
+                Click="Logout_Click"
+                Margin="0,10,10,10"/>
         </DockPanel>
 
         <!-- Nội dung chính -->
         <StackPanel Margin="20">
-            <Button Content="Xem thông tin cá nhân" Height="40" Margin="0,5"/>
-            <Button Content="Chấm công" Height="40" Margin="0,5"/>
+            <Button Content="Xem thông tin cá nhân" Height="40" Margin="0,5" Click="ViewProfile_Click"/>
+
+            <Expander x:Name="TimekeepingExpander" Header="Chấm công" FontSize="14" Margin="0,5" FontWeight="SemiBold">
+                <StackPanel Margin="20,10,20,10">
+                    <Button x:Name="CheckInButton" 
+                            Content="Check In" 
+                            Height="35" Margin="0,5" 
+                            IsEnabled="False" 
+                            Click="CheckIn_Click"/>
+
+                    <Button x:Name="CheckOutButton" 
+                            Content="Check Out" 
+                            Height="35" Margin="0,5" 
+                            IsEnabled="False" 
+                            Click="CheckOut_Click"/>
+                </StackPanel>
+            </Expander>
+
         </StackPanel>
     </DockPanel>
 </Window>

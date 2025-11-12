@@ -1,0 +1,101 @@
+﻿<Window x:Class="EmployeeManagement.EmployeeInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Thông tin cá nhân" 
+        Height="650" Width="550"  WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        WindowStyle="ToolWindow">
+
+    <Border Padding="25" Background="#F4F7FC" CornerRadius="8">
+        <StackPanel>
+            <TextBlock Text="Thông tin cá nhân" 
+                       FontSize="26" FontWeight="Bold" 
+                       Foreground="#007ACC" 
+                       Margin="0,0,0,25" 
+                       HorizontalAlignment="Center"/>
+
+            <Border Width="120" Height="120" 
+                    CornerRadius="60"  Background="#E0E0E0" 
+                    BorderBrush="#CCCCCC" BorderThickness="1"
+                    HorizontalAlignment="Center" Margin="0,0,0,20">
+                <Image x:Name="AvatarImage" 
+                       Stretch="UniformToFill" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center">
+                    <Image.Clip>
+                        <EllipseGeometry Center="60,60" RadiusX="60" RadiusY="60"/>
+                    </Image.Clip>
+                </Image>
+            </Border>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Margin" Value="5,8"/>
+                        <Setter Property="FontSize" Value="14"/>
+                    </Style>
+                    <Style TargetType="TextBlock" x:Key="LabelStyle">
+                        <Setter Property="Margin" Value="5,8"/>
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="Foreground" Value="#333"/>
+                    </Style>
+                </Grid.Resources>
+
+                <TextBlock Text="Họ và tên:" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle}" />
+                <TextBlock x:Name="FullNameText" Grid.Row="0" Grid.Column="1" />
+
+                <TextBlock Text="Tên đăng nhập:" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelStyle}" />
+                <TextBlock x:Name="UsernameText" Grid.Row="1" Grid.Column="1" />
+
+                <TextBlock Text="Vai trò:" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelStyle}" />
+                <TextBlock x:Name="RoleText" Grid.Row="2" Grid.Column="1" />
+
+                <TextBlock Text="Chức vụ:" Grid.Row="3" Grid.Column="0" Style="{StaticResource LabelStyle}" />
+                <TextBlock x:Name="PositionText" Grid.Row="3" Grid.Column="1" />
+
+                <TextBlock Text="Phòng ban:" Grid.Row="4" Grid.Column="0" Style="{StaticResource LabelStyle}" />
+                <TextBlock x:Name="DepartmentText" Grid.Row="4" Grid.Column="1" />
+
+                <TextBlock Text="Email:" Grid.Row="5" Grid.Column="0" Style="{StaticResource LabelStyle}" />
+                <TextBlock x:Name="EmailText" Grid.Row="5" Grid.Column="1" />
+
+                <TextBlock Text="Số điện thoại:" Grid.Row="6" Grid.Column="0" Style="{StaticResource LabelStyle}" />
+                <TextBlock x:Name="PhoneText" Grid.Row="6" Grid.Column="1" />
+
+                <TextBlock Text="Địa chỉ:" Grid.Row="7" Grid.Column="0" Style="{StaticResource LabelStyle}" />
+                <TextBlock x:Name="AddressText" Grid.Row="7" Grid.Column="1" TextWrapping="Wrap" />
+
+                <TextBlock Text="Ngày sinh:" Grid.Row="8" Grid.Column="0" Style="{StaticResource LabelStyle}" />
+                <TextBlock x:Name="DobText" Grid.Row="8" Grid.Column="1" />
+
+                <TextBlock Text="Ngày vào làm:" Grid.Row="9" Grid.Column="0" Style="{StaticResource LabelStyle}" />
+                <TextBlock x:Name="StartDateText" Grid.Row="9" Grid.Column="1" />
+
+            </Grid>
+
+            <Button Content="Đóng" 
+                    Width="120" Height="38" 
+                    Margin="0,35,0,0"
+                    HorizontalAlignment="Center" 
+                    Click="Close_Click"/>
+        </StackPanel>
+    </Border>
+</Window>

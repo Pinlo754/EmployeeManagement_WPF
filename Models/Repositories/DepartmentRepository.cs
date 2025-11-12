@@ -1,4 +1,5 @@
-﻿using Models.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Models.Entities;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -72,6 +73,11 @@ namespace Models.Repositories
                 emp.DepartmentId = newDepartmentId;
                 _context.SaveChanges();
             }
+        }
+
+        public async Task<List<Department>> GetAllAsync()
+        {
+            return await _context.Departments.OrderBy(d => d.DepartmentName).ToListAsync();
         }
     }
 }

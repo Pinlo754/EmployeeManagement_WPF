@@ -39,5 +39,10 @@ namespace EmployeeManagement
             var payrollWindow = new PayrollManagementWindow();
             payrollWindow.Show();
         }
+        private void ManageNotifications_Click(object sender, RoutedEventArgs e)
+        {
+            var managementWindow = new NotificationManagementWindow(_account);
+            managementWindow.ShowDialog();
+        }
     }
 }

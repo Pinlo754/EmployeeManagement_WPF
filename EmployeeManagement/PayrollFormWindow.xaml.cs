@@ -13,8 +13,8 @@ namespace EmployeeManagement
         {
             InitializeComponent();
 
-            var payrollRepo = new PayrollRepository(context);
-            var employeeRepo = new EmployeeRepository(context);
+            var payrollRepo = new PayrollRepository(context, 1);
+            var employeeRepo = new EmployeeRepository(context, 1);
 
             // Khởi tạo ViewModel, truyền vào context và dữ liệu cần sửa (nếu có)
             _viewModel = new PayrollFormViewModel(payrollRepo, employeeRepo, payroll);

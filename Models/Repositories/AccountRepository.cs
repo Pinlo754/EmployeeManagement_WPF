@@ -17,13 +17,12 @@ namespace Models.Repositories
             _context = context;
         }
 
-        public async Task<Account?> LoginAsync(string username, string password)
+        public async Task<Account?> LoginAsync(string username, string passwordHash)
         {
-            // Giả sử password đã hash sẵn
             return await _context.Accounts
-                .FirstOrDefaultAsync(a => a.Username == username && a.PasswordHash == password && a.IsActive == true);
+                .Include(a => a.Employees)
+                    .ThenInclude(e => e.Department)
+                .FirstOrDefaultAsync(a => a.Username == username && a.PasswordHash == passwordHash && a.IsActive == true);
         }
     }
-
-
 }

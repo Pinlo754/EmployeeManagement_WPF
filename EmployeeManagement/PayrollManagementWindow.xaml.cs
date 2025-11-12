@@ -20,8 +20,8 @@ namespace EmployeeManagement
             InitializeComponent();
 
             _context = new EmployeeManagementContext();
-            _payrollRepo = new PayrollRepository(_context);
-            _employeeRepo = new EmployeeRepository(_context);
+            _payrollRepo = new PayrollRepository(_context, 1);
+            _employeeRepo = new EmployeeRepository(_context, 1);
 
             _viewModel = new PayrollViewModel(_payrollRepo, _employeeRepo);
             DataContext = _viewModel;

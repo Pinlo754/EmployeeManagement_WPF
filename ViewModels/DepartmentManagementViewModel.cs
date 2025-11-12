@@ -33,7 +33,7 @@ namespace ViewModels
         public DepartmentManagementViewModel(DepartmentRepository departmentRepo)
         {
             _departmentRepo = departmentRepo;
-            _employeeRepo = new EmployeeRepository(new EmployeeManagementContext());
+            _employeeRepo = new EmployeeRepository(new EmployeeManagementContext(), 1);
             Departments = new ObservableCollection<Department>(_departmentRepo.GetAll());
             EmployeesInDepartment = new ObservableCollection<Employee>();
         }

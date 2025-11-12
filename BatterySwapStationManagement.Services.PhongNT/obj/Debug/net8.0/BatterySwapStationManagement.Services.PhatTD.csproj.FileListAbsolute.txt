@@ -1,0 +1,15 @@
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhatTD.csproj.AssemblyReference.cache
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhatTD.GeneratedMSBuildEditorConfig.editorconfig
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhatTD.AssemblyInfoInputs.cache
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhatTD.AssemblyInfo.cs
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhatTD.csproj.CoreCompileInputs.cache
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\bin\Debug\net8.0\BatterySwapStationManagement.Services.PhatTD.deps.json
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\bin\Debug\net8.0\BatterySwapStationManagement.Services.PhatTD.dll
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\bin\Debug\net8.0\BatterySwapStationManagement.Services.PhatTD.pdb
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\bin\Debug\net8.0\BatterySwapStationManagement.Repositories.PhatTD.dll
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\bin\Debug\net8.0\BatterySwapStationManagement.Repositories.PhatTD.pdb
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatteryS.991C9F3D.Up2Date
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhatTD.dll
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\refint\BatterySwapStationManagement.Services.PhatTD.dll
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhatTD.pdb
+D:\PRN232_FA25\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\ref\BatterySwapStationManagement.Services.PhatTD.dll

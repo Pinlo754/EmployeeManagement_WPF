@@ -1,0 +1,45 @@
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.csproj.AssemblyReference.cache
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.GeneratedMSBuildEditorConfig.editorconfig
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.AssemblyInfoInputs.cache
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.AssemblyInfo.cs
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.csproj.CoreCompileInputs.cache
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\bin\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.deps.json
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\bin\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.dll
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\bin\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.pdb
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\bin\Debug\net8.0\BatterySwapStationManagement.Repositories.PhongNT.dll
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\bin\Debug\net8.0\BatterySwapStationManagement.Repositories.PhongNT.pdb
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatteryS.D7209C27.Up2Date
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.dll
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\refint\BatterySwapStationManagement.Services.PhongNT.dll
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.pdb
+D:\Data\PRN232\FA25_PRN232_ASM1_SE180323_PhatTD\BatterySwapStationManagement.Services.PhatTD\obj\Debug\net8.0\ref\BatterySwapStationManagement.Services.PhongNT.dll
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.dll
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\refint\BatterySwapStationManagement.Services.PhongNT.dll
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.pdb
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\bin\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.deps.json
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\bin\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.dll
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\bin\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.pdb
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\bin\Debug\net8.0\BatterySwapStationManagement.Repositories.PhongNT.dll
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\bin\Debug\net8.0\BatterySwapStationManagement.Repositories.PhongNT.pdb
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.csproj.AssemblyReference.cache
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.GeneratedMSBuildEditorConfig.editorconfig
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.AssemblyInfoInputs.cache
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.AssemblyInfo.cs
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.csproj.CoreCompileInputs.cache
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatteryS.D7209C27.Up2Date
+D:\Data\PRN232\FA25_PRN232_ASM1_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\ref\BatterySwapStationManagement.Services.PhongNT.dll
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\bin\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.deps.json
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\bin\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.dll
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\bin\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.pdb
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\bin\Debug\net8.0\BatterySwapStationManagement.Repositories.PhongNT.dll
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\bin\Debug\net8.0\BatterySwapStationManagement.Repositories.PhongNT.pdb
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.csproj.AssemblyReference.cache
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.GeneratedMSBuildEditorConfig.editorconfig
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.AssemblyInfoInputs.cache
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.AssemblyInfo.cs
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.csproj.CoreCompileInputs.cache
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatteryS.D7209C27.Up2Date
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.dll
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\refint\BatterySwapStationManagement.Services.PhongNT.dll
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\BatterySwapStationManagement.Services.PhongNT.pdb
+D:\AppData\MS Visual Studio\repos\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\BatterySwapStationManagement.Services.PhongNT\obj\Debug\net8.0\ref\BatterySwapStationManagement.Services.PhongNT.dll

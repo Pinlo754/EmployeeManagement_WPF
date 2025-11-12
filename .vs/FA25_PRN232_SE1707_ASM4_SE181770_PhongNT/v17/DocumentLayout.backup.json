@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\AppData\\MS Visual Studio\\repos\\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC8F9097-6CD4-461F-817D-384080F9FF59}|BatterySwapManagement.SOAPService.PhongNT\\BatterySwapStationManagement.SOAPService.PhongNT.csproj|d:\\appdata\\ms visual studio\\repos\\fa25_prn232_se1707_asm4_se181770_phongnt\\batteryswapmanagement.soapservice.phongnt\\soapservices\\batteryphongntsoapservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC8F9097-6CD4-461F-817D-384080F9FF59}|BatterySwapManagement.SOAPService.PhongNT\\BatterySwapStationManagement.SOAPService.PhongNT.csproj|solutionrelative:batteryswapmanagement.soapservice.phongnt\\soapservices\\batteryphongntsoapservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC8F9097-6CD4-461F-817D-384080F9FF59}|BatterySwapManagement.SOAPService.PhongNT\\BatterySwapStationManagement.SOAPService.PhongNT.csproj|d:\\appdata\\ms visual studio\\repos\\fa25_prn232_se1707_asm4_se181770_phongnt\\batteryswapmanagement.soapservice.phongnt\\soapmodels\\batteryphongnt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC8F9097-6CD4-461F-817D-384080F9FF59}|BatterySwapManagement.SOAPService.PhongNT\\BatterySwapStationManagement.SOAPService.PhongNT.csproj|solutionrelative:batteryswapmanagement.soapservice.phongnt\\soapmodels\\batteryphongnt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC8F9097-6CD4-461F-817D-384080F9FF59}|BatterySwapManagement.SOAPService.PhongNT\\BatterySwapStationManagement.SOAPService.PhongNT.csproj|d:\\appdata\\ms visual studio\\repos\\fa25_prn232_se1707_asm4_se181770_phongnt\\batteryswapmanagement.soapservice.phongnt\\soapmodels\\batteryhealthrecordphongnt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC8F9097-6CD4-461F-817D-384080F9FF59}|BatterySwapManagement.SOAPService.PhongNT\\BatterySwapStationManagement.SOAPService.PhongNT.csproj|solutionrelative:batteryswapmanagement.soapservice.phongnt\\soapmodels\\batteryhealthrecordphongnt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC8F9097-6CD4-461F-817D-384080F9FF59}|BatterySwapManagement.SOAPService.PhongNT\\BatterySwapStationManagement.SOAPService.PhongNT.csproj|d:\\appdata\\ms visual studio\\repos\\fa25_prn232_se1707_asm4_se181770_phongnt\\batteryswapmanagement.soapservice.phongnt\\batteryswapstationmanagement.soapservice.phongnt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CC8F9097-6CD4-461F-817D-384080F9FF59}|BatterySwapManagement.SOAPService.PhongNT\\BatterySwapStationManagement.SOAPService.PhongNT.csproj|solutionrelative:batteryswapmanagement.soapservice.phongnt\\batteryswapstationmanagement.soapservice.phongnt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 252,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BatteryPhongNTSOAPService.cs",
+              "DocumentMoniker": "D:\\AppData\\MS Visual Studio\\repos\\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\\BatterySwapManagement.SOAPService.PhongNT\\SOAPServices\\BatteryPhongNTSOAPService.cs",
+              "RelativeDocumentMoniker": "BatterySwapManagement.SOAPService.PhongNT\\SOAPServices\\BatteryPhongNTSOAPService.cs",
+              "ToolTip": "D:\\AppData\\MS Visual Studio\\repos\\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\\BatterySwapManagement.SOAPService.PhongNT\\SOAPServices\\BatteryPhongNTSOAPService.cs",
+              "RelativeToolTip": "BatterySwapManagement.SOAPService.PhongNT\\SOAPServices\\BatteryPhongNTSOAPService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T09:04:50.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BatterySwapStationManagement.SOAPService.PhongNT",
+              "DocumentMoniker": "D:\\AppData\\MS Visual Studio\\repos\\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\\BatterySwapManagement.SOAPService.PhongNT\\BatterySwapStationManagement.SOAPService.PhongNT.csproj",
+              "RelativeDocumentMoniker": "BatterySwapManagement.SOAPService.PhongNT\\BatterySwapStationManagement.SOAPService.PhongNT.csproj",
+              "ToolTip": "D:\\AppData\\MS Visual Studio\\repos\\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\\BatterySwapManagement.SOAPService.PhongNT\\BatterySwapStationManagement.SOAPService.PhongNT.csproj",
+              "RelativeToolTip": "BatterySwapManagement.SOAPService.PhongNT\\BatterySwapStationManagement.SOAPService.PhongNT.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-23T09:03:31.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BatteryHealthRecordPhongNT.cs",
+              "DocumentMoniker": "D:\\AppData\\MS Visual Studio\\repos\\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\\BatterySwapManagement.SOAPService.PhongNT\\SOAPModels\\BatteryHealthRecordPhongNT.cs",
+              "RelativeDocumentMoniker": "BatterySwapManagement.SOAPService.PhongNT\\SOAPModels\\BatteryHealthRecordPhongNT.cs",
+              "ToolTip": "D:\\AppData\\MS Visual Studio\\repos\\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\\BatterySwapManagement.SOAPService.PhongNT\\SOAPModels\\BatteryHealthRecordPhongNT.cs",
+              "RelativeToolTip": "BatterySwapManagement.SOAPService.PhongNT\\SOAPModels\\BatteryHealthRecordPhongNT.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T09:02:08.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BatteryPhongNT.cs",
+              "DocumentMoniker": "D:\\AppData\\MS Visual Studio\\repos\\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\\BatterySwapManagement.SOAPService.PhongNT\\SOAPModels\\BatteryPhongNT.cs",
+              "RelativeDocumentMoniker": "BatterySwapManagement.SOAPService.PhongNT\\SOAPModels\\BatteryPhongNT.cs",
+              "ToolTip": "D:\\AppData\\MS Visual Studio\\repos\\FA25_PRN232_SE1707_ASM4_SE181770_PhongNT\\BatterySwapManagement.SOAPService.PhongNT\\SOAPModels\\BatteryPhongNT.cs",
+              "RelativeToolTip": "BatterySwapManagement.SOAPService.PhongNT\\SOAPModels\\BatteryPhongNT.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T09:00:18.558Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

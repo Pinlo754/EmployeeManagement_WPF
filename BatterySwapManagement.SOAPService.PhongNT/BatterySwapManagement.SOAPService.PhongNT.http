@@ -1,0 +1,6 @@
+@BatterySwapManagement.SOAPService.PhongNT_HostAddress = http://localhost:5081
+
+GET {{BatterySwapManagement.SOAPService.PhongNT_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

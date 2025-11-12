@@ -1,0 +1,30 @@
+﻿<Window x:Class="EmployeeManagement.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Admin Dashboard" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+
+    <DockPanel LastChildFill="True">
+        <!-- Header -->
+        <DockPanel Background="#007ACC" Height="50" DockPanel.Dock="Top">
+            <TextBlock x:Name="WelcomeText" 
+                       Foreground="White" 
+                       FontSize="16" 
+                       VerticalAlignment="Center" 
+                       Margin="10,0,0,0"
+                       Text="Xin chào, User"/>
+
+            <Button Content="Logout" 
+                    DockPanel.Dock="Right"
+                    Width="77" 
+                    Margin="500,10,10,10"
+                    Click="Logout_Click" RenderTransformOrigin="3.927,0.535"/>
+        </DockPanel>
+
+        <!-- Nội dung chính -->
+        <StackPanel Margin="20">
+            <Button Content="Quản lý nhân viên" Height="40" Margin="0,5" Click="ManageEmployees_Click"/>
+            <Button Content="Quản lý phòng ban" Height="40" Margin="0,5" Click="ManageDepartments_Click"/>
+            <Button Content="Quản lý lương thưởng" Height="40" Margin="0,5" Click="ManagePayrolls_Click"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

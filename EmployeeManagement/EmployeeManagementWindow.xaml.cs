@@ -17,10 +17,6 @@ namespace EmployeeManagement
         public EmployeeManagementWindow()
         {
             InitializeComponent();
-<<<<<<< Updated upstream
-
-            var empRepo = new EmployeeRepository(new EmployeeManagementContext(), 1);
-=======
             if (Session.CurrentUser == null)
             {
                 MessageBox.Show("Chưa có người dùng đăng nhập!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -28,7 +24,6 @@ namespace EmployeeManagement
                 return;
             }
             var empRepo = new EmployeeRepository(new EmployeeManagementContext());
->>>>>>> Stashed changes
             var depRepo = new DepartmentRepository(new EmployeeManagementContext());
             var logRepo = new ActivityLogRepository(new EmployeeManagementContext());
             _viewModel = new EmployeeManagementViewModel(empRepo, depRepo, logRepo, Session.CurrentUser.AccountId);

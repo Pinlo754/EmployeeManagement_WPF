@@ -13,3 +13,18 @@ D:\AppData\MS Visual Studio\repos\EmployeeManagement\Models\obj\Debug\net8.0\ref
 D:\AppData\MS Visual Studio\repos\EmployeeManagement\Models\obj\Debug\net8.0\Models.pdb
 D:\AppData\MS Visual Studio\repos\EmployeeManagement\Models\obj\Debug\net8.0\Models.genruntimeconfig.cache
 D:\AppData\MS Visual Studio\repos\EmployeeManagement\Models\obj\Debug\net8.0\ref\Models.dll
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\obj\Debug\net8.0\Models.csproj.AssemblyReference.cache
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\obj\Debug\net8.0\Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\obj\Debug\net8.0\Models.AssemblyInfoInputs.cache
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\obj\Debug\net8.0\Models.AssemblyInfo.cs
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\obj\Debug\net8.0\Models.csproj.CoreCompileInputs.cache
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\obj\Debug\net8.0\Models.sourcelink.json
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\obj\Debug\net8.0\Models.dll
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\obj\Debug\net8.0\refint\Models.dll
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\obj\Debug\net8.0\Models.pdb
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\bin\Debug\net8.0\Models.deps.json
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\bin\Debug\net8.0\Models.runtimeconfig.json
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\bin\Debug\net8.0\Models.dll
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\bin\Debug\net8.0\Models.pdb
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\obj\Debug\net8.0\Models.genruntimeconfig.cache
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\Models\obj\Debug\net8.0\ref\Models.dll

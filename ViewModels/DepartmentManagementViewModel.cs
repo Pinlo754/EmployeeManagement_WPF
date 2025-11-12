@@ -34,14 +34,9 @@ namespace ViewModels
             int currentUserId)
         {
             _departmentRepo = departmentRepo;
-<<<<<<< Updated upstream
-            _employeeRepo = new EmployeeRepository(new EmployeeManagementContext(), 1);
-=======
             _currentUserId = currentUserId;
             _employeeRepo = new EmployeeRepository(new EmployeeManagementContext());
             _logRepo = new ActivityLogRepository(new EmployeeManagementContext());
-
->>>>>>> Stashed changes
             Departments = new ObservableCollection<Department>(_departmentRepo.GetAll());
             EmployeesInDepartment = new ObservableCollection<Employee>();
         }

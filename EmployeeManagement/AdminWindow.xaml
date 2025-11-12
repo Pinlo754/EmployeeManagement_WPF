@@ -1,35 +1,92 @@
 ﻿<Window x:Class="EmployeeManagement.AdminWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Admin Dashboard" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Admin Dashboard" Height="450" Width="800" WindowStartupLocation="CenterScreen"
+        Background="#F5F5F5">
+
+    <Window.Resources>
+        <!-- Gradient header brush -->
+        <LinearGradientBrush x:Key="HeaderGradient" StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Color="#007ACC" Offset="0"/>
+            <GradientStop Color="#005A9E" Offset="1"/>
+        </LinearGradientBrush>
+
+        <!-- Shadow effect -->
+        <DropShadowEffect x:Key="ShadowEffect" BlurRadius="8" Color="#888" ShadowDepth="2"/>
+
+        <!-- Style cho Button -->
+        <Style x:Key="ModernButton" TargetType="Button">
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="8"
+                                Effect="{StaticResource ShadowEffect}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#005A9E"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#004C87"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Style cho Logout Button -->
+        <Style x:Key="LogoutButtonStyle" TargetType="Button" BasedOn="{StaticResource ModernButton}">
+            <Setter Property="Background" Value="#E74C3C"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#C0392B"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#A93226"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
 
     <DockPanel LastChildFill="True">
         <!-- Header -->
-        <DockPanel Background="#007ACC" Height="50" DockPanel.Dock="Top">
-            <TextBlock x:Name="WelcomeText" 
-                       Foreground="White" 
-                       FontSize="16" 
-                       VerticalAlignment="Center" 
-                       Margin="10,0,0,0"
-                       Text="Xin chào, User"/>
-
-            <Button Content="Logout" 
-                    DockPanel.Dock="Right"
-                    Width="77" 
-                    Margin="500,10,10,10"
-                    Click="Logout_Click" RenderTransformOrigin="3.927,0.535"/>
-        </DockPanel>
+        <Border Background="{StaticResource HeaderGradient}" Height="60" DockPanel.Dock="Top" CornerRadius="0,0,10,10">
+            <Grid>
+                <TextBlock x:Name="WelcomeText" 
+                           Foreground="White" 
+                           FontSize="16" 
+                           VerticalAlignment="Center" 
+                           Margin="15,0,0,0"
+                           Text="Xin chào, User"/>
+                <Button Content="Logout" 
+                        Width="80"
+                        Height="30"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Margin="0,0,15,0"
+                        Click="Logout_Click"
+                        Style="{StaticResource LogoutButtonStyle}"/>
+            </Grid>
+        </Border>
 
         <!-- Nội dung chính -->
         <StackPanel Margin="20">
-            <Button Content="Quản lý nhân viên" Height="40" Margin="0,5" Click="ManageEmployees_Click"/>
-            <Button Content="Quản lý phòng ban" Height="40" Margin="0,5" Click="ManageDepartments_Click"/>
-            <Button Content="Quản lý lương thưởng" Height="40" Margin="0,5" Click="ManagePayrolls_Click"/>
-<<<<<<< Updated upstream
-            <Button Content="Quản lý thông báo" Height="40" Margin="0,5" Click="ManageNotifications_Click"/>
-=======
-            <Button Content="Quản lý hoạt động" Height="40" Margin="0,5" Click="ActivityLogs_Click"/>
->>>>>>> Stashed changes
+            <Button Content="Quản lý nhân viên" Style="{StaticResource ModernButton}" Click="ManageEmployees_Click"/>
+            <Button Content="Quản lý phòng ban" Style="{StaticResource ModernButton}" Click="ManageDepartments_Click"/>
+            <Button Content="Quản lý lương thưởng" Style="{StaticResource ModernButton}" Click="ManagePayrolls_Click"/>
+            <Button Content="Quản lý thông báo" Style="{StaticResource ModernButton}" Click="ManageNotifications_Click"/>
+            <Button Content="Quản lý hoạt động" Style="{StaticResource ModernButton}" Click="ActivityLogs_Click"/>
         </StackPanel>
     </DockPanel>
 </Window>

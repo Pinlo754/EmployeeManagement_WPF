@@ -1,11 +1,60 @@
 ﻿<Window x:Class="EmployeeManagement.ActivityLogWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EmployeeManagement"
-        mc:Ignorable="d"
-        Title="Lịch sử hoạt động" Height="500" Width="800">
+        Title="Lịch sử hoạt động" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F5F5">
+
+    <Window.Resources>
+        <!-- Shadow effect -->
+        <DropShadowEffect x:Key="ShadowEffect" BlurRadius="8" Color="#888" ShadowDepth="2"/>
+
+        <!-- Style DataGrid hiện đại -->
+        <Style TargetType="DataGrid">
+            <Setter Property="RowBackground" Value="White"/>
+            <Setter Property="AlternatingRowBackground" Value="#F3F3F3"/>
+            <Setter Property="GridLinesVisibility" Value="None"/>
+            <Setter Property="HeadersVisibility" Value="Column"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="Margin" Value="0,5,0,0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <Setter Property="CanUserDeleteRows" Value="False"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#DDD"/>
+            <Setter Property="VerticalGridLinesBrush" Value="#DDD"/>
+            <Setter Property="Effect" Value="{StaticResource ShadowEffect}"/>
+        </Style>
+
+        <!-- DataGridColumnHeader Style -->
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#007ACC" Offset="0"/>
+                        <GradientStop Color="#005A9E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+        <!-- ComboBox hiện đại -->
+        <Style TargetType="ComboBox">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+        <!-- TextBlock trong ComboBox -->
+        <Style TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -13,18 +62,16 @@
         </Grid.RowDefinitions>
 
         <!-- ComboBox chọn account Admin -->
-        <ComboBox Grid.Row="0" Margin="0,0,0,10" 
-                  ItemsSource="{Binding Accounts}" 
-                  SelectedItem="{Binding SelectedAccount}">
+        <ComboBox Grid.Row="0" ItemsSource="{Binding Accounts}" SelectedItem="{Binding SelectedAccount}">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Username, TargetNullValue='Tất cả Admin'}" />
+                    <TextBlock Text="{Binding Username, TargetNullValue='Tất cả Admin'}"/>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
 
         <!-- DataGrid hiển thị log -->
-        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Logs}" IsReadOnly="True">
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Logs}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding LogId}" Width="50"/>
                 <DataGridTextColumn Header="Thời gian" Binding="{Binding ActionTime, StringFormat=dd/MM/yyyy HH:mm}" Width="150"/>

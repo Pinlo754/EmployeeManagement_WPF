@@ -1,7 +1,70 @@
 ﻿<Window x:Class="EmployeeManagement.PayrollManagementWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Quản lý Lương" Height="500" Width="900">
+        Title="Quản lý Lương" Height="500" Width="900"
+        Background="#f0f0f0"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <!-- Style cho Button -->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="5,2"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderBrush" Value="#005A9E"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#005A9E"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#003F6B"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style cho DataGrid -->
+        <Style TargetType="DataGrid">
+            <Setter Property="AlternatingRowBackground" Value="#E5F1FB"/>
+            <Setter Property="GridLinesVisibility" Value="Horizontal"/>
+            <Setter Property="RowHeight" Value="30"/>
+            <Setter Property="ColumnHeaderHeight" Value="35"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#ccc"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <!-- Style cho ComboBox -->
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="Width" Value="120"/>
+        </Style>
+
+        <!-- Style cho TextBlock label -->
+        <Style TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5,0"/>
+        </Style>
+    </Window.Resources>
+
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -10,31 +73,27 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10" VerticalAlignment="Center">
-            <TextBlock Text="Chọn nhân viên:" VerticalAlignment="Center"/>
+            <TextBlock Text="Chọn nhân viên:"/>
             <ComboBox ItemsSource="{Binding Employees}"
-              SelectedItem="{Binding SelectedEmployee}"
-              DisplayMemberPath="FullName"
-              Width="200"/>
+                      SelectedItem="{Binding SelectedEmployee}"
+                      DisplayMemberPath="FullName"/>
 
-            <TextBlock Text="Tháng:" VerticalAlignment="Center"/>
+            <TextBlock Text="Tháng:"/>
             <ComboBox ItemsSource="{Binding Months}" 
-              SelectedItem="{Binding SelectedMonth}" 
-              Width="80"/>
+                      SelectedItem="{Binding SelectedMonth}"/>
 
-            <TextBlock Text="Quý:" VerticalAlignment="Center"/>
+            <TextBlock Text="Quý:"/>
             <ComboBox ItemsSource="{Binding Quarters}" 
-              SelectedItem="{Binding SelectedQuarter}" 
-              Width="80"/>
+                      SelectedItem="{Binding SelectedQuarter}"/>
 
-            <Button Content="Xóa filter" Margin="10,0" Click="ClearFilter_Click"/>
+            <Button Content="Xóa filter" Click="ClearFilter_Click"/>
         </StackPanel>
 
-
         <DataGrid ItemsSource="{Binding Payrolls}"
-              SelectedItem="{Binding SelectedPayroll}"
-              AutoGenerateColumns="False"
-              Grid.Row="1"
-              Margin="0,0,0,10">
+                  SelectedItem="{Binding SelectedPayroll}"
+                  AutoGenerateColumns="False"
+                  Grid.Row="1"
+                  Margin="0,0,0,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding PayrollId}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Mã NV" Binding="{Binding EmployeeId}" />
@@ -49,10 +108,10 @@
         </DataGrid>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2">
-            <Button Content="Xuất Excel" Margin="5" Click="ExportExcel_Click"/>
-            <Button Content="Thêm" Command="{Binding AddCommand}" Margin="5" Click="AddPayroll_Click"/>
-            <Button Content="Sửa" Command="{Binding UpdateCommand}" Margin="5" Click="UpdatePayroll_Click"/>
-            <Button Content="Xóa" Command="{Binding DeleteCommand}" Margin="5" Click="DeletePayroll_Click"/>
+            <Button Content="Xuất Excel" Click="ExportExcel_Click"/>
+            <Button Content="Thêm" Click="AddPayroll_Click"/>
+            <Button Content="Sửa" Click="UpdatePayroll_Click"/>
+            <Button Content="Xóa" Click="DeletePayroll_Click"/>
         </StackPanel>
     </Grid>
 </Window>

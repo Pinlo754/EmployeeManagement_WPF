@@ -8,11 +8,8 @@ namespace Models.Repositories
     public class EmployeeRepository
     {
         private readonly EmployeeManagementContext _context;
-<<<<<<< Updated upstream
         private readonly ActivityLogRepository _logRepo;
         private readonly int _currentUserId; 
-=======
->>>>>>> Stashed changes
 
         public EmployeeRepository(EmployeeManagementContext context)
         {
@@ -35,6 +32,14 @@ namespace Models.Repositories
                            .Include(e => e.Department)
                            .FirstOrDefault(e => e.EmployeeId == employeeId);
         }
+
+        public Employee? GetByIdWithDepartment(int id)
+        {
+            return _context.Employees
+                           .Include(e => e.Department)
+                           .FirstOrDefault(e => e.EmployeeId == id);
+        }
+
 
         // Thêm nhân viên mới
         public void Add(Employee employee)

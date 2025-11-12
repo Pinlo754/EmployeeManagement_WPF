@@ -3,57 +3,110 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EmployeeManagement"
         mc:Ignorable="d"
-        Title="Employee Details" Height="600" Width="500">
-    <Grid Margin="10">
+        Title="Employee Details" Height="600" Width="500"
+        WindowStartupLocation="CenterScreen"
+        Background="#F7F7F7">
+
+    <Window.Resources>
+        <!-- Style hiện đại cho Button -->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="5"
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#005A9E"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#003F6B"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="#AAAAAA"/>
+                                <Setter Property="Foreground" Value="#EEEEEE"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style TextBlock tiêu đề -->
+        <Style x:Key="LabelStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="Margin" Value="0,5,0,0"/>
+        </Style>
+
+        <!-- Style TextBlock giá trị -->
+        <Style x:Key="ValueStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#555555"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel>
-            <TextBlock Text="Avatar:" FontWeight="Bold"/>
-            <Image Source="{Binding Employee.AvatarUrl}" Height="100" Width="100" Margin="0,0,0,10"/>
-            
-            <TextBlock Text="Họ tên:" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Employee.FullName}" Margin="0,0,0,10"/>
+        <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBlock Text="Avatar:" Style="{StaticResource LabelStyle}"/>
+                <Image Source="{Binding Employee.AvatarUrl}" Height="100" Width="100" Margin="0,0,0,10"/>
 
-            <TextBlock Text="Ngày sinh:" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Employee.DateOfBirth}" Margin="0,0,0,10"/>
+                <TextBlock Text="Họ tên:" Style="{StaticResource LabelStyle}"/>
+                <TextBlock Text="{Binding Employee.FullName}" Style="{StaticResource ValueStyle}"/>
 
-            <TextBlock Text="Giới tính:" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Employee.Gender}" Margin="0,0,0,10"/>
+                <TextBlock Text="Ngày sinh:" Style="{StaticResource LabelStyle}"/>
+                <TextBlock Text="{Binding Employee.DateOfBirth}" Style="{StaticResource ValueStyle}"/>
 
-            <TextBlock Text="Địa chỉ:" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Employee.Address}" Margin="0,0,0,10"/>
+                <TextBlock Text="Giới tính:" Style="{StaticResource LabelStyle}"/>
+                <TextBlock Text="{Binding Employee.Gender}" Style="{StaticResource ValueStyle}"/>
 
-            <TextBlock Text="Số điện thoại:" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Employee.Phone}" Margin="0,0,0,10"/>
+                <TextBlock Text="Địa chỉ:" Style="{StaticResource LabelStyle}"/>
+                <TextBlock Text="{Binding Employee.Address}" Style="{StaticResource ValueStyle}"/>
 
-            <TextBlock Text="Email:" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Employee.Email}" Margin="0,0,0,10"/>
+                <TextBlock Text="Số điện thoại:" Style="{StaticResource LabelStyle}"/>
+                <TextBlock Text="{Binding Employee.Phone}" Style="{StaticResource ValueStyle}"/>
 
-            <TextBlock Text="Phòng ban:" FontWeight="Bold"/>
-            <TextBlock Text="{Binding DepartmentName}" Margin="0,0,0,10"/>
+                <TextBlock Text="Email:" Style="{StaticResource LabelStyle}"/>
+                <TextBlock Text="{Binding Employee.Email}" Style="{StaticResource ValueStyle}"/>
 
-            <TextBlock Text="Chức vụ:" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Employee.Position}" Margin="0,0,0,10"/>
+                <TextBlock Text="Phòng ban:" Style="{StaticResource LabelStyle}"/>
+                <TextBlock Text="{Binding DepartmentName}" Style="{StaticResource ValueStyle}"/>
 
-            <TextBlock Text="Lương cơ bản:" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Employee.BaseSalary}" Margin="0,0,0,10"/>
+                <TextBlock Text="Chức vụ:" Style="{StaticResource LabelStyle}"/>
+                <TextBlock Text="{Binding Employee.Position}" Style="{StaticResource ValueStyle}"/>
 
-            <TextBlock Text="Ngày bắt đầu:" FontWeight="Bold"/>
-            <TextBlock Text="{Binding StartDateString}" Margin="0,0,0,10"/>
+                <TextBlock Text="Lương cơ bản:" Style="{StaticResource LabelStyle}"/>
+                <TextBlock Text="{Binding Employee.BaseSalary}" Style="{StaticResource ValueStyle}"/>
 
-            <TextBlock x:Name="MessageBlock" Foreground="Red" Margin="0,10,0,0"/>
-        </StackPanel>
-        
+                <TextBlock Text="Ngày bắt đầu:" Style="{StaticResource LabelStyle}"/>
+                <TextBlock Text="{Binding StartDateString}" Style="{StaticResource ValueStyle}"/>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
-            <Button Content="Sửa" Width="80" Margin="5" Click="Edit_Click"/>
-            <Button Content="Xóa" Width="80" Margin="5" Click="Delete_Click"/>
-            <Button Content="Đóng" Width="80" Margin="5" Click="Close_Click"/>
+                <TextBlock x:Name="MessageBlock" Foreground="Red" Margin="0,10,0,0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button Content="Sửa" Width="80" Click="Edit_Click"/>
+            <Button Content="Xóa" Width="80" Click="Delete_Click"/>
+            <Button Content="Đóng" Width="80" Click="Close_Click"/>
         </StackPanel>
     </Grid>
 </Window>

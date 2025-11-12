@@ -28,14 +28,9 @@ namespace EmployeeManagement
             }
 
             _context = new EmployeeManagementContext();
-<<<<<<< Updated upstream
-            _payrollRepo = new PayrollRepository(_context, 1);
-            _employeeRepo = new EmployeeRepository(_context, 1);
-=======
             _payrollRepo = new PayrollRepository(_context);
             _employeeRepo = new EmployeeRepository(_context);
             _logRepo = new ActivityLogRepository(_context);
->>>>>>> Stashed changes
 
             _viewModel = new PayrollViewModel(_payrollRepo, _employeeRepo, Session.CurrentUser.AccountId);
             DataContext = _viewModel;

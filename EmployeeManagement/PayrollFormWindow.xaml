@@ -4,7 +4,74 @@
         Title="Thông tin bảng lương"
         Height="484" Width="400"
         WindowStartupLocation="CenterOwner"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        Background="#F5F5F5">
+
+    <Window.Resources>
+        <!-- Style cho TextBlock -->
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,5,0,0"/>
+        </Style>
+
+        <!-- Style cho TextBox và DatePicker -->
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="Margin" Value="0,5,0,10"/>
+            <Setter Property="Padding" Value="4"/>
+            <Setter Property="BorderBrush" Value="#ccc"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+        <Style TargetType="DatePicker">
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="Margin" Value="0,5,0,10"/>
+        </Style>
+
+        <!-- Style cho ComboBox -->
+        <Style TargetType="ComboBox">
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="Margin" Value="0,5,0,10"/>
+            <Setter Property="Padding" Value="4"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#ccc"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <!-- Style cho Button -->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="10,0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="#005A9E"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#005A9E"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#003F6B"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -23,30 +90,27 @@
             <ComboBox ItemsSource="{Binding Employees}"
                       DisplayMemberPath="FullName"
                       SelectedValuePath="EmployeeId"
-                      SelectedValue="{Binding Payroll.EmployeeId}"
-                      Margin="0 5 0 10"/>
+                      SelectedValue="{Binding Payroll.EmployeeId}"/>
 
             <TextBlock Text="Lương cơ bản:"/>
-            <TextBox Text="{Binding Payroll.BaseSalary}" Margin="0 5 0 10"/>
+            <TextBox Text="{Binding Payroll.BaseSalary}"/>
 
             <TextBlock Text="Phụ cấp:"/>
-            <TextBox Text="{Binding Payroll.Allowances}" Margin="0 5 0 10"/>
+            <TextBox Text="{Binding Payroll.Allowances}"/>
 
             <TextBlock Text="Thưởng:"/>
-            <TextBox Text="{Binding Payroll.Bonuses}" Margin="0 5 0 10"/>
+            <TextBox Text="{Binding Payroll.Bonuses}"/>
 
             <TextBlock Text="Phạt:"/>
-            <TextBox Text="{Binding Payroll.Penalties}" Margin="0 5 0 10"/>
+            <TextBox Text="{Binding Payroll.Penalties}"/>
 
             <TextBlock Text="Ngày trả:"/>
-            <DatePicker SelectedDate="{Binding Payroll.PayDate}" Margin="0 5 0 10"/>
+            <DatePicker SelectedDate="{Binding Payroll.PayDate}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 15 0 0">
-            <Button Content="Lưu" Width="80" Margin="10 0"
-                    Command="{Binding SaveCommand}"/>
-            <Button Content="Hủy" Width="80" Margin="10 0"
-                    Command="{Binding CancelCommand}"/>
+            <Button Content="Lưu" Command="{Binding SaveCommand}"/>
+            <Button Content="Hủy" Command="{Binding CancelCommand}"/>
         </StackPanel>
     </Grid>
 </Window>

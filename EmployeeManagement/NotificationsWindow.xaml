@@ -3,7 +3,65 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Bảng thông báo" Height="500" Width="700"
         WindowStartupLocation="CenterOwner"
-        WindowStyle="ToolWindow">
+        WindowStyle="ToolWindow"
+        Background="#F5F5F5">
+
+    <Window.Resources>
+        <!-- TextBlock chung -->
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,2,0,2"/>
+        </Style>
+
+        <!-- Button chung -->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="#005A9E"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#005A9E"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#003F6B"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- ListView hiện đại -->
+        <Style TargetType="ListView">
+            <Setter Property="BorderBrush" Value="#DDDDDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <!-- GridViewColumn TextBlock padding -->
+        <Style TargetType="GridViewColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="#E8F0FE"/>
+            <Setter Property="Foreground" Value="#007ACC"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </Window.Resources>
+
     <Grid Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -14,8 +72,7 @@
         <TextBlock Text="Bảng thông báo" FontSize="22" FontWeight="Bold" 
                    Foreground="#007ACC" Margin="0,0,0,15"/>
 
-        <ListView x:Name="NotificationsListView" Grid.Row="1" 
-                  BorderBrush="#DDDDDD" BorderThickness="1">
+        <ListView x:Name="NotificationsListView" Grid.Row="1">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Người gửi" Width="120">
@@ -28,9 +85,7 @@
                     </GridViewColumn>
 
                     <GridViewColumn Header="Tiêu đề" DisplayMemberBinding="{Binding Title}" Width="150"/>
-
                     <GridViewColumn Header="Nội dung" DisplayMemberBinding="{Binding Message}" Width="250"/>
-
                     <GridViewColumn Header="Ngày gửi" Width="140">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
@@ -43,8 +98,7 @@
             </ListView.View>
         </ListView>
 
-        <Button Content="Đóng" Grid.Row="2" Width="100" Height="30" 
-                HorizontalAlignment="Right" Margin="0,15,0,0"
+        <Button Content="Đóng" Grid.Row="2" HorizontalAlignment="Right" Margin="0,15,0,0"
                 Click="Close_Click"/>
     </Grid>
 </Window>

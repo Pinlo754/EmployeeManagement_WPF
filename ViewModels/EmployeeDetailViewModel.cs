@@ -26,7 +26,23 @@ namespace ViewModels
         public Employee Employee
         {
             get => _employee;
-            set { _employee = value; OnPropertyChanged(); }
+            set
+            {
+                _employee = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(DepartmentName));
+            }
+        }
+
+        // Property để hiển thị phòng ban
+        public string DepartmentName
+        {
+            get
+            {
+                if (Employee == null || Employee.Department == null)
+                    return "Chưa có phòng ban";
+                return Employee.Department.DepartmentName;
+            }
         }
 
         // Event để hiển thị thông báo, lỗi hoặc xác nhận
@@ -47,7 +63,8 @@ namespace ViewModels
 
             try
             {
-                var emp = _repo.GetById(Employee.EmployeeId);
+                var emp = _repo.GetByIdWithDepartment(Employee.EmployeeId);
+
                 if (emp == null) return false;
 
                 // Xóa các collection liên quan nếu có
@@ -78,7 +95,7 @@ namespace ViewModels
 
             try
             {
-                var existing = _repo.GetById(Employee.EmployeeId);
+                var existing = _repo.GetByIdWithDepartment(Employee.EmployeeId);
                 if (existing != null)
                 {
                     existing.FullName = Employee.FullName;
@@ -98,6 +115,7 @@ namespace ViewModels
                     _logRepo.LogAction(_currentUserId, "Update", "Employee", existing.EmployeeId, $"Cập nhật nhân viên {existing.FullName}");
 
                     ShowMessage?.Invoke("Cập nhật nhân viên thành công.");
+                    Employee = existing; // cập nhật lại Employee và DepartmentName
                     return true;
                 }
 

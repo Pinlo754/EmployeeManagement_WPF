@@ -14,3 +14,19 @@ D:\AppData\MS Visual Studio\repos\EmployeeManagement\ViewModels\obj\Debug\net8.0
 D:\AppData\MS Visual Studio\repos\EmployeeManagement\ViewModels\obj\Debug\net8.0\refint\ViewModels.dll
 D:\AppData\MS Visual Studio\repos\EmployeeManagement\ViewModels\obj\Debug\net8.0\ViewModels.pdb
 D:\AppData\MS Visual Studio\repos\EmployeeManagement\ViewModels\obj\Debug\net8.0\ref\ViewModels.dll
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\obj\Debug\net8.0\ViewModels.csproj.AssemblyReference.cache
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\obj\Debug\net8.0\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\obj\Debug\net8.0\ViewModels.AssemblyInfoInputs.cache
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\obj\Debug\net8.0\ViewModels.AssemblyInfo.cs
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\obj\Debug\net8.0\ViewModels.csproj.CoreCompileInputs.cache
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\obj\Debug\net8.0\ViewModels.sourcelink.json
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\obj\Debug\net8.0\ViewModels.dll
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\obj\Debug\net8.0\refint\ViewModels.dll
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\obj\Debug\net8.0\ViewModels.pdb
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\bin\Debug\net8.0\ViewModels.deps.json
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\bin\Debug\net8.0\ViewModels.dll
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\bin\Debug\net8.0\ViewModels.pdb
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\bin\Debug\net8.0\Models.dll
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\bin\Debug\net8.0\Models.pdb
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\obj\Debug\net8.0\ViewModels.csproj.Up2Date
+D:\Data\TaiLieuGiaSu\EmployeeManagement\project\EmployeeManagement_WPF\ViewModels\obj\Debug\net8.0\ref\ViewModels.dll

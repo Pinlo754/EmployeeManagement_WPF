@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G/xj8Cr4DXk=",
+  "dgSpecHash": "o74/7Y6dNdc=",
   "success": true,
-  "projectFilePath": "D:\\AppData\\MS Visual Studio\\repos\\EmployeeManagement\\Models\\Models.csproj",
+  "projectFilePath": "D:\\Data\\TaiLieuGiaSu\\EmployeeManagement\\project\\EmployeeManagement_WPF\\Models\\Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pinlo\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\pinlo\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

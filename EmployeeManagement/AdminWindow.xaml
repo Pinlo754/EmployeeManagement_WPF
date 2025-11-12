@@ -25,6 +25,7 @@
             <Button Content="Quản lý nhân viên" Height="40" Margin="0,5" Click="ManageEmployees_Click"/>
             <Button Content="Quản lý phòng ban" Height="40" Margin="0,5" Click="ManageDepartments_Click"/>
             <Button Content="Quản lý lương thưởng" Height="40" Margin="0,5" Click="ManagePayrolls_Click"/>
+            <Button Content="Quản lý thông báo" Height="40" Margin="0,5" Click="ManageNotifications_Click"/>
         </StackPanel>
     </DockPanel>
 </Window>

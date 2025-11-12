@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement_wpf\\employeemanagement\\payrollmanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\payrollmanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement_wpf\\employeemanagement\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement_wpf\\employeemanagement\\payrollformwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\payrollformwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement_wpf\\employeemanagement\\employeemanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\employeemanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement_wpf\\employeemanagement\\employeedetailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\employeedetailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9EF3A91D-33E4-493A-8849-33DCF4B98CBC}|ViewModels\\ViewModels.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement_wpf\\viewmodels\\departmentmanagementviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EF3A91D-33E4-493A-8849-33DCF4B98CBC}|ViewModels\\ViewModels.csproj|solutionrelative:viewmodels\\departmentmanagementviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB3D0188-DAF8-4065-B693-8191873CF36A}|Models\\Models.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement_wpf\\models\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB3D0188-DAF8-4065-B693-8191873CF36A}|Models\\Models.csproj|solutionrelative:models\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|e:\\code\\c#\\wpf\\new\\employeemanagement_wpf\\employeemanagement\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D9B9A782-A41D-44D6-86A6-E536B6FAF044}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,80 +27,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PayrollManagementWindow.xaml.cs",
-              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\EmployeeManagement\\PayrollManagementWindow.xaml.cs",
-              "RelativeDocumentMoniker": "EmployeeManagement\\PayrollManagementWindow.xaml.cs",
-              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\EmployeeManagement\\PayrollManagementWindow.xaml.cs",
-              "RelativeToolTip": "EmployeeManagement\\PayrollManagementWindow.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAIAwwBcAAAA+AAAAAAAAAA==",
+              "Title": "AdminWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\EmployeeManagement\\AdminWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\AdminWindow.xaml.cs",
+              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\EmployeeManagement\\AdminWindow.xaml.cs",
+              "RelativeToolTip": "EmployeeManagement\\AdminWindow.xaml.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:05:45.888Z",
+              "WhenOpened": "2025-11-12T16:10:12.227Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PayrollFormWindow.xaml.cs",
-              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\EmployeeManagement\\PayrollFormWindow.xaml.cs",
-              "RelativeDocumentMoniker": "EmployeeManagement\\PayrollFormWindow.xaml.cs",
-              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\EmployeeManagement\\PayrollFormWindow.xaml.cs",
-              "RelativeToolTip": "EmployeeManagement\\PayrollFormWindow.xaml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIAwwBAAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:05:39.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmployeeManagementWindow.xaml.cs",
-              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\EmployeeManagement\\EmployeeManagementWindow.xaml.cs",
-              "RelativeDocumentMoniker": "EmployeeManagement\\EmployeeManagementWindow.xaml.cs",
-              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\EmployeeManagement\\EmployeeManagementWindow.xaml.cs",
-              "RelativeToolTip": "EmployeeManagement\\EmployeeManagementWindow.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAIAwwBMAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:05:34.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EmployeeDetailWindow.xaml.cs",
-              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\EmployeeManagement\\EmployeeDetailWindow.xaml.cs",
-              "RelativeDocumentMoniker": "EmployeeManagement\\EmployeeDetailWindow.xaml.cs",
-              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\EmployeeManagement\\EmployeeDetailWindow.xaml.cs",
-              "RelativeToolTip": "EmployeeManagement\\EmployeeDetailWindow.xaml.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAtwCkAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:05:01.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EmployeeRepository.cs",
-              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\Models\\Repositories\\EmployeeRepository.cs",
-              "RelativeDocumentMoniker": "Models\\Repositories\\EmployeeRepository.cs",
-              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\Models\\Repositories\\EmployeeRepository.cs",
-              "RelativeToolTip": "Models\\Repositories\\EmployeeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:03:09.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DepartmentManagementViewModel.cs",
-              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\ViewModels\\DepartmentManagementViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\DepartmentManagementViewModel.cs",
-              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\ViewModels\\DepartmentManagementViewModel.cs",
-              "RelativeToolTip": "ViewModels\\DepartmentManagementViewModel.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAswCMAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T15:59:06.856Z",
-              "EditorCaption": ""
+              "Title": "AdminWindow.xaml",
+              "DocumentMoniker": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\EmployeeManagement\\AdminWindow.xaml",
+              "RelativeDocumentMoniker": "EmployeeManagement\\AdminWindow.xaml",
+              "ToolTip": "E:\\Code\\C#\\WPF\\New\\EmployeeManagement_WPF\\EmployeeManagement\\AdminWindow.xaml",
+              "RelativeToolTip": "EmployeeManagement\\AdminWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-12T16:09:21.191Z"
             }
           ]
         }
